@@ -39,7 +39,7 @@ Hope you will like it :)  
     * [PY4H4SHER](#py4h4sher)
     * [LEENODE](#leenode)
     
-* [WCTF 2016](#wctf-2016)
+* [WCTF 2016](#blackbox)  
     * [BlackBox](#blackbox)
 
 * [AIS3 Final 2015 Final](#sqlpwn)
@@ -497,12 +497,12 @@ $ curl http://1.2.3.4/admin/thefl4g.txt
 
 Solved: **0 / 12**  
 Difficulty: **★★★★**  
-Tag: **GrayBox**, **PHP**, **JAVA**, **mod_jk**, **H2**, **SQL Injection**  
+Tag: **GrayBox**, **PHP**, **JAVA**, **mod_jk**, **H2**, **SQL Injection**, **WAF**  
 
 #### Idea  
 
 * Multilayered architecture vulnerability  
-* Default mod_jk setting leads to directory travesal  
+* Default and up to date mod_jk leads to directory travesal  
 * WAF bypassed by incorrect BASE64 and URLENCODE  
 * SQL Injection on H2 Database  
 * Execute Code by using  H2 SQL Injection  
@@ -512,8 +512,6 @@ Tag: **GrayBox**, **PHP**, **JAVA**, **mod_jk**, **H2**, **SQL Injection**
 * [here](wctf-2016/BlackBox)  
 
 #### Solution  
-
-* Run [exploit.py](ais3-final-2015/sqlpwn/exploit.py) to win race condition
 
 * Get source code  
    ```text
