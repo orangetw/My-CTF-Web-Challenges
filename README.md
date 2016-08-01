@@ -415,7 +415,7 @@ Platform:  **BlackBox**, **PHP**, **H2**, **SQL Injection**
 #### Idea  
 
 * SQL Injection on H2 Database  
-* Execute Code by using  H2 SQL Injection  
+* Execute Code by using H2 SQL Injection  
 
 #### Source Code
 
@@ -503,9 +503,9 @@ Tag: **GrayBox**, **PHP**, **JAVA**, **mod_jk**, **H2**, **SQL Injection**, **WA
 
 * Multilayered architecture vulnerability  
 * Default and up to date mod_jk leads to directory travesal  
-* WAF bypassed by incorrect BASE64 and URLENCODE  
+* Bypass WAF by incorrect usage of BASE64 and URLENCODE  
 * SQL Injection on H2 Database  
-* Execute Code by using  H2 SQL Injection  
+* Execute Code by using H2 SQL Injection  
 
 #### Source Code  
 
