@@ -4,7 +4,7 @@
 Hi, I am Orange. This is the repo of CTF challenges I made. It contains challs's source code, writeup and some idea explanation.  
 
 
-I am a CTFer and Bug Bounty Hunter, loving web hacking and penetration testing. So you will see these challs are all about web. Also, if you have any question about these challs, you can find me in following ways  
+I am a CTFer and Bug Bounty Hunter, loving web hacking and penetration testing. So you will see these challs are all about web. If you have any question about these challs, you can find me in following ways  
 * orange@chroot.org   
 * [blog.orange.tw](http://blog.orange.tw/)   
 
