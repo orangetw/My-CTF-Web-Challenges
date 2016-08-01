@@ -1,0 +1,32 @@
+// ========== CATALINA CODE PERMISSIONS =======================================
+
+
+// These permissions apply to the logging API
+grant codeBase "file:${catalina.home}/bin/tomcat-juli.jar" {
+        permission java.util.PropertyPermission "java.util.logging.config.class", "read";
+        permission java.util.PropertyPermission "java.util.logging.config.file", "read";
+        permission java.lang.RuntimePermission "shutdownHooks";
+        permission java.io.FilePermission "${catalina.base}${file.separator}conf${file.separator}logging.properties", "read";
+        permission java.util.PropertyPermission "catalina.base", "read";
+        permission java.util.logging.LoggingPermission "control";
+        permission java.io.FilePermission "${catalina.base}${file.separator}logs", "read, write";
+        permission java.io.FilePermission "${catalina.base}${file.separator}logs${file.separator}*", "read, write";
+        permission java.lang.RuntimePermission "getClassLoader";
+        permission java.lang.RuntimePermission "setContextClassLoader";
+        // To enable per context logging configuration, permit read access to the appropriate file.
+        // Be sure that the logging configuration is secure before enabling such access
+        // eg for the examples web application:
+        // permission java.io.FilePermission "${catalina.base}${file.separator}webapps${file.separator}examples${file.separator}WEB-INF${file.separator}classes${file.separator}logging.properties", "read";
+};
+
+// These permissions apply to the server startup code
+grant codeBase "file:${catalina.home}/bin/bootstrap.jar" {
+        permission java.security.AllPermission;
+};
+
+// These permissions apply to the servlet API classes
+// and those that are shared across all class loaders
+// located in the "lib" directory
+grant codeBase "file:${catalina.home}/lib/-" {
+        permission java.security.AllPermission;
+};

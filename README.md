@@ -11,6 +11,9 @@ I am a CTFer and Bug Bounty Hunter, loving web hacking and penetration testing. 
 
 <br>
 Hope you will like it :)  
+
+
+**P.s.** By the way, [Babyfirst](#babyfirst) is my favorite one in all of challenges, if you don't have time to see all, please look it at lease!
 <br>
 
 
@@ -36,6 +39,9 @@ Hope you will like it :)  
     * [PY4H4SHER](#py4h4sher)
     * [LEENODE](#leenode)
     
+* [WCTF 2016](#wctf-2016)
+    * [BlackBox](#blackbox)
+
 * [AIS3 Final 2015 Final](#sqlpwn)
     * [SQLPWN](#sqlpwn)
     
@@ -237,12 +243,31 @@ Tag: **WhiteBox**, **PHP**, **Command Injection**
 
 #### Idea
 
-* Use CRLF to bypass regular express check  
+* Use `NewLine` to bypass regular express check  
 * Command injection only with alphanumeric characters  
 
 #### Source Code
 
 * [here](hitcon-ctf-2015/babyfirst)  
+
+   ```php
+<?php
+    highlight_file(__FILE__);
+
+    $dir = 'sandbox/' . $_SERVER['REMOTE_ADDR'];
+    if ( !file_exists($dir) )
+        mkdir($dir);
+    chdir($dir);
+
+    $args = $_GET['args'];
+    for ( $i=0; $i<count($args); $i++ ){
+        if ( !preg_match('/^\w+$/', $args[$i]) )
+            exit();
+    }
+
+    exec("/bin/orange " . implode(" ", $args));
+?>
+   ```
 
 
 #### Solution

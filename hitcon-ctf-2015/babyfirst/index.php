@@ -11,6 +11,5 @@
         if ( !preg_match('/^\w+$/', $args[$i]) )
             exit();
     }
-
     exec("/bin/orange " . implode(" ", $args));
 ?>

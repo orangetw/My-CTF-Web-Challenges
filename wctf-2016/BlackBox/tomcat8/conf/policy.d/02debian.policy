@@ -1,0 +1,10 @@
+// These permissions apply to all JARs from Debian packages
+grant codeBase "file:/usr/share/java/-" {
+  permission java.security.AllPermission;
+};
+grant codeBase "file:/usr/share/maven-repo/-" {
+  permission java.security.AllPermission;
+};
+grant codeBase "file:/usr/share/ant/lib/-" {
+  permission java.security.AllPermission;
+};
