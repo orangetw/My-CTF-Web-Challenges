@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <meta name="author" content="Orange Tsai">
+  <meta name="hint" content="check http://<url>/nanana :)">
+  <title> nanana | login</title>
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <style>
+    body{background: #eee url(static/sativa.png);}
+    html,body{
+        position: relative;
+        height: 100%;
+    }
+
+    #output{
+        position: absolute;
+        width: 300px;
+        top: -75px;
+        left: 0;
+        color: #fff;
+    }
+
+    .login-container{
+        position: relative;
+        width: 300px;
+        margin: 80px auto;
+        padding: 20px 40px 40px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #ccc;
+    }
+
+
+    .login-container::before,.login-container::after{
+        content: "";
+        position: absolute;
+        width: 100%;height: 100%;
+        top: 3.5px;left: 0;
+        background: #fff;
+        z-index: -1;
+        -webkit-transform: rotateZ(4deg);
+        -moz-transform: rotateZ(4deg);
+        -ms-transform: rotateZ(4deg);
+        border: 1px solid #ccc;
+
+    }
+
+    .login-container::after{
+        top: 5px;
+        z-index: -2;
+        -webkit-transform: rotateZ(-2deg);
+         -moz-transform: rotateZ(-2deg);
+          -ms-transform: rotateZ(-2deg);
+
+    }
+
+    .avatar{
+        width: 150px;height: 150px;
+        margin: 10px auto 30px;
+        border-radius: 100%;
+        border: 2px solid #aaa;
+        background-size: cover;
+        background-image: url(static/i.png);
+        background-position: 36%;
+        
+
+    }
+
+    .form-box input{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        height:40px;
+        border: 1px solid #ccc;;
+        background: #fafafa;
+        transition:0.2s ease-in-out;
+
+    }
+
+    .form-box input:focus{
+        outline: 0;
+        background: #eee;
+    }
+
+    .form-box input[type="text"]{
+        border-radius: 5px 5px 0 0;
+        text-transform: lowercase;
+    }
+
+    .form-box input[type="password"]{
+        border-radius: 0 0 5px 5px;
+        border-top: 0;
+    }
+
+    .form-box button.login{
+        margin-top:15px;
+        padding: 10px 20px;
+    }
+
+
+
+  </style>
+  <script src="static/jquery.min.js"></script>
+
+  <script TYPE="text/javascript">
+  	function send(username, password){
+  		$.post( '/cgi-bin/nanana', 
+  				{'username': username, 'password': password, 'action': 'login'},
+  				function(data){
+                    $("#output").removeClass(' alert alert-success');
+                    $("#output").addClass("alert alert-danger animated fadeInUp")
+                    $("#output").html(data);
+  				} );
+  	}
+  </script>
+</head>
+<body>
+  <div class="container">
+  	<div class="login-container">
+  			<div id='output'> </div>
+        <div class="avatar"> </div>
+        <div class="form-box">
+            <form method='POST' onsubmit='send(this.username.value, this.password.value);return false;'>
+                <input name="username" type="text" placeholder="username" autofocus="autofocus" >
+                <input type="password" name="password" placeholder="password">
+                <button class="btn btn-info btn-block login" type="submit"> Login </button>
+            </form>
+        </div>
+    </div>     
+  </div>
+
+</body>
+</html>

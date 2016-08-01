@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages xmlns="http://jboss.com/products/seam/pages"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://jboss.com/products/seam/pages http://jboss.com/products/seam/pages-2.2.xsd"
+
+       no-conversation-view-id="/main.xhtml"
+                 login-view-id="/home.xhtml">
+
+	<!-- register -->
+    <page view-id="/register.xhtml">
+        <action if="#{validation.failed}" execute="#{register.invalid}"/>
+        <navigation>
+            <rule if="#{register.registered}">
+                <redirect view-id="/home.xhtml"/>
+            </rule>
+        </navigation>
+    </page>
+
+
+	<!-- home -->
+    <page view-id="/home.xhtml" action="#{identity.isLoggedIn}">
+        <navigation from-action="#{identity.isLoggedIn}"> 
+      		<rule if-outcome="true"> 
+         		<redirect view-id="/main.xhtml"/> 
+      		</rule> 
+      		<rule if-outcome="false"> 
+         		<render view-id="/home.xhtml"/> 
+      		</rule> 
+		</navigation>
+    </page>
+
+
+<!--     css
+    <page view-id="/css.xhtml" login-required="false">
+    	<action execute="#{util.getCSS()}"/>
+    </page>     -->
+    
+    <!-- profile -->
+    <page view-id="/profile.xhtml" login-required="true">
+    	<action execute="#{profile.getProfile()}"/>
+    </page>
+    
+    
+    <!-- edit -->
+    <page view-id="/edit.xhtml" login-required="true">        
+    </page>
+    
+    <!-- report -->
+    <page view-id="/report.xhtml" login-required="true">
+    	<action execute="#{captcha.init()}"/>        
+    </page>
+
+	<!--  main -->
+    <page view-id="/main.xhtml" login-required="true">
+    </page>
+    
+	<!--  flag -->
+    <page view-id="/flag.xhtml" login-required="true" action="#{flag.isAdmin()}">
+        <navigation from-action="#{flag.isAdmin()}"> 
+      		<rule if-outcome="true"> 
+         		<render view-id="/flag.xhtml"/> 
+      		</rule> 
+      		<rule if-outcome="false"> 
+         		<redirect view-id="/main.xhtml"/> 
+      		</rule> 
+		</navigation>
+    </page>
+
+	
+	<!--  logout  -->    
+    <page view-id="*">
+        <navigation from-action="#{identity.logout}">
+            <redirect view-id="/home.xhtml"/>
+        </navigation>
+    </page>
+    
+    
+    
+    <exception class="org.jboss.seam.security.NotLoggedInException">
+        <redirect view-id="/home.xhtml">
+            <message severity="warn">You must be logged in to use this feature</message>
+        </redirect>
+    </exception>
+
+    <exception class="javax.faces.application.ViewExpiredException">
+        <redirect view-id="/home.xhtml">
+            <message severity="warn">Session expired, please log in again</message>
+        </redirect>
+    </exception>
+
+</pages>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- ===================================================================== -->
+<!--                                                                       -->
+<!--  Log4j Configuration                                                  -->
+<!--                                                                       -->
+<!-- ===================================================================== -->
+
+<!-- $Id: log4j.xml,v 1.1 2007/07/09 04:32:44 myuan Exp $ -->
+
+<!--
+   | For more configuration infromation and examples see the Jakarta Log4j
+   | owebsite: http://jakarta.apache.org/log4j
+ -->
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+   
+   <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+      <!--
+      <errorHandler class="org.jboss.logging.util.OnlyOnceErrorHandler"/>
+      -->
+      <param name="Target" value="System.out"/>
+
+      <layout class="org.apache.log4j.PatternLayout">
+         <param name="ConversionPattern" value="%d{HH:mm:ss,SSS} %-5p [%c{1}] %m%n"/>
+      </layout>
+   </appender>
+   
+   <!-- 
+   <category name="org.hibernate">
+      <priority value="DEBUG"/>
+   </category>
+   -->
+
+   <!-- 
+   <category name="org.jboss.seam">
+      <priority value="DEBUG"/>
+   </category>
+   -->
+   
+   <!-- 
+   <category name="org.jboss.kernel">
+      <priority value="DEBUG"/>
+   </category>
+   -->
+
+   <root>
+      <priority value="INFO"/>
+      <appender-ref ref="CONSOLE"/>
+   </root>
+
+</log4j:configuration>

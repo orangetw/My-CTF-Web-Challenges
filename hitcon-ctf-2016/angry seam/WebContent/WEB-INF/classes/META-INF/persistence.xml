@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" 
+             version="1.0">
+   <persistence-unit name="userDatabase" transaction-type="RESOURCE_LOCAL">
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+<!--      <class>org.domain.registration.model.User</class>-->
+      
+<!--      <jta-data-source>java:comp/env/jdbc/TestDB</jta-data-source>-->
+      <properties>
+      
+         <property name="hibernate.show_sql" value="true"/>
+         <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>
+
+         <property name="hibernate.hbm2ddl.auto" value="update"/>
+         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/> 
+		<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+		<property name="hibernate.connection.url"  value="jdbc:mysql://localhost:3306/angryseam" />
+		<property name="hibernate.connection.username" value="root" />
+		<property name="hibernate.connection.password" value="angryseam"/> 
+         
+  <!-- 
+        <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+        <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>   
+        <property name="hibernate.connection.url" value="jdbc:hsqldb:mem:unit-testing-jpa"/>  
+        <property name="hibernate.connection.username" value="sa"/>
+        <property name="hibernate.connection.password" value=""/>
+ -->
+<!--          <property name="hibernate.hbm2ddl.auto" value="update"/>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle9Dialect"/>
+        <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+        
+        <property name="hibernate.connection.url" value="jdbc:oracle:thin:pooja/tiger@localhost:1521:XE"></property>   
+        <property name="hibernate.connection.username" value="pooja"/>
+        <property name="hibernate.connection.password" value="tiger"/> -->
+ 
+      </properties>
+   </persistence-unit>
+</persistence>

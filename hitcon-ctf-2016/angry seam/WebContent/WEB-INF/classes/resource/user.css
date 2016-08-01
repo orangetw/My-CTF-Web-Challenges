@@ -1,0 +1,222 @@
+@import "https://bootswatch.com/united/bootstrap.min.css";
+/* Setup defaults since variable in browsers
+----------------------------------------------- */
+body, div, dd, dt, dl, img, ul, ol, li, p, h1, h2, h3, h4, h5, form, hr, fieldset {
+	margin: 0;
+	padding: 0;
+}
+/* Element Defaults
+----------------------------------------------- */
+html {
+	height: 100%;
+	background-color: #DBD4C6;
+}
+img {
+	border: 0;
+}
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	line-height: 1.25em;
+	color: #362F2D;
+	position: relative;
+	width: 760px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+label {
+	font-weight: bold;
+	color: #5E5147;
+}
+input {
+	border: 1px solid #C3BBB6;
+	padding: 4px;
+	margin: 5px 0;
+}
+select {
+	border: 1px solid #C3BBB6;
+	padding: 4px;
+	margin: 5px 0;
+}ol, ul {
+	margin: 10px 0px 10px 6px;
+}
+li {
+	margin: 10px 12px;
+}
+fieldset {
+	border: 0;
+}
+/* Layout
+----------------------------------------------- */
+#document {
+	padding: 0 1px;
+	background: #fff ;
+	float: left;
+	border-bottom: 1px solid #C3BBB6;
+}
+#header {
+	float: left;
+	width: 758px;
+	height: 46px;
+}
+#container {
+	width: 758px;
+}
+#sidebar {
+	float: left;
+	width: 190px;
+	margin-top: 96px;
+	padding: 20px 10px 0 10px;
+}
+#content {
+	float: left;
+	width: 548px;
+	margin-top: 75px;
+	padding-top: 5px;
+}
+#footer {
+	clear: both;
+	margin-top: 40px;
+	float: left;
+	padding: 20px;
+	border-top: 1px solid #C3BBB6;
+	background-color: #fff;
+	width: 718px;
+	text-align: right;
+}
+/* General
+----------------------------------------------- */
+input[type="submit"], input[type="button"] {
+	font-weight: bold;
+	color: #fff;
+	border: 1px solid #5D1414;
+	height: 26px;
+	border-style: none;
+}
+.center {
+	text-align: center;
+}
+.entry {
+	clear: both;
+	padding-top: 10px;
+}
+.entry .label {
+	float: left;
+	padding-top: 10px;
+	padding-right: 5px;
+	font-weight: bold;
+	width: 150px;
+	text-align: right;
+}
+.entry .output {
+	float: left;
+	width: 250px;
+	padding-top: 10px;
+	text-align: left;
+}
+.entry .input {
+	float: left;
+	width: 250px;
+	text-align: left;
+}
+/* Sidebar
+----------------------------------------------- */
+.notes {
+	text-align: center;
+	font-size: small;
+}
+.subnotes {
+    margin-top: 1em;
+	font-size: small;
+}
+.errors {
+	font-size: small;
+	font-weight: bold;
+	text-align: center;
+	color: #600;
+}
+.errors div {
+	text-align: left;
+}
+.errors input {
+	border: 1px solid #600;
+}
+.errors ul {
+	list-style: none;
+}
+.buttonBox {
+	text-align: center;
+	padding: 5px 0;
+}
+#sidebar p {
+	font-size: small;
+	color: #8B7869;
+	line-height: 150%;
+	padding-bottom: 10px;
+}
+#sidebar li {
+	font-size: small;
+	color: #8B7869;
+}
+#sidebar h1 {
+	line-height: normal;
+	font-weight: bold;
+	font-size: small;
+}
+/*
+#sidebar p:hover {
+	color: #362F2D;
+}
+*/
+/* Content
+----------------------------------------------- */
+#content .section {
+	float: left;
+	width: 518px;
+	padding: 15px 15px 0 15px;
+}
+#content .section h1 {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	line-height: normal;
+	font-weight: normal;
+	font-size: large;
+}
+#content .section p {
+	line-height: 150%;
+	padding: 10px 0;
+	font-size: small;
+}
+
+
+/* Header
+----------------------------------------------- */
+#title {
+	float: left;
+	padding: 1px 0 6px 15px;
+}
+#status {
+	color: #C7B299;
+	float: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: x-small;
+	text-align: right;
+	padding-top: 14px;
+	padding-right: 15px;
+}
+#status a {
+	color: #C7B299;
+	text-decoration: none;
+}
+/* Homepage Modifications
+----------------------------------------------- */
+#pgHome #sidebar {
+	margin-top: 207px;
+}
+#pgHome #content {
+	margin-top: 183px;
+}
+#pgHome #sidebar input[type="submit"] {
+	height: 30px;
+}
