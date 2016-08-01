@@ -146,12 +146,12 @@ Tag: **GrayBox**, **Java**
 
 #### Source Code
 
-* [here](hitcon-ctf-2016/angry goy)
+* [here](hitcon-ctf-2016/angry boy)
 
 #### Solution
 
-* [exploit.py](hitcon-ctf-2016/angry goy/exploit.py)
-* [decrpt.py](hitcon-ctf-2016/angry goy/decrypt.py)
+* [exploit.py](hitcon-ctf-2016/angry boy/exploit.py)
+* [decrpt.py](hitcon-ctf-2016/angry boy/decrypt.py)
 
 #### Write Ups
 
