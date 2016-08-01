@@ -243,7 +243,7 @@ Tag: **WhiteBox**, **PHP**, **Command Injection**
 
 #### Idea
 
-* Use `NewLine` to bypass regular express check  
+* Use `NewLine` to bypass regular expression check  
 * Command injection only with alphanumeric characters  
 
 #### Source Code
@@ -291,6 +291,9 @@ http://localhost/
 &args[5]=php
 &args[6]=aa
 ```
+
+And there are also lots of creative solutions, you can check write ups below.  
+
 
 #### Write Ups
 
