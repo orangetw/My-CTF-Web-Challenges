@@ -292,7 +292,7 @@ http://localhost/
 &args[6]=aa
 ```
 
-And there are also lots of creative solutions, you can check write ups below.  
+And there are also lots of creative solutions, you can check the write ups below.  
 
 
 #### Write Ups
