@@ -21,15 +21,15 @@ Hope you will like it :)  
     * [%%%](#papapa)
     * [Leaking](#leaking)
     * [BabyTrick](#babytrick)
-    * [Angry Boy](#angryboy)
-    * [Angry Seam](#angryseam)  
+    * [Angry Boy](#angry-boy)
+    * [Angry Seam](#angry-seam)  
     
 * [HITCON 2015 Quals](#babyfirst)  
     * [Babyfirst](#babyfirst)
     * [nanana](#nanana)
     * [Giraffe's Coffee](#giraffes-coffee)
     * [lalala](#lalala)
-    * [Babyfirst](#)
+    * [Use-After-FLEE](#use-after-free)
     
 * [HITCON 2014 Quals](#pushincat)
     * [PUSHIN CAT](#pushincat)
@@ -355,7 +355,7 @@ header( "Location: gopher://127.0.0.1:9000/x%01%01Zh%00%08%00%00%00%01%00%00%00%
 * [Hitcon 2015 lalala web400 task](https://docs.google.com/document/d/1eALKwCyogM5Mw_D4qWe48X-PAGZw_2vT82aP0EPIr-8/mobilebasic?pli=1)  
 
 
-## **User-After-FLEE**  
+## **Use-After-FLEE**  
 
 Solved: **1 / 969**  
 Difficulty: **★★★★☆**  
