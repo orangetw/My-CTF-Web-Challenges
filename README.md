@@ -13,7 +13,7 @@ I am a CTFer and Bug Bounty Hunter, loving web hacking and penetration testing. 
 Hope you will like it :)  
 
 
-**P.s.** By the way, [Babyfirst](#babyfirst) is my favorite one in all of challenges, if you don't have time to see all, please look it at lease!
+**P.s.** By the way, [Babyfirst](#babyfirst) is my favorite one in all of these  challenges, if you don't have time to see all, please look it at lease!
 <br>
 
 
