@@ -136,7 +136,7 @@ curl http://1.2.3.4/
 
 #### Write Ups
 
-* [Hitcon 2016 – Baby Trick](ttp://0xecute.com/index.php/2016/10/10/baby-trick/)  
+* [Hitcon 2016 – Baby Trick](http://0xecute.com/index.php/2016/10/10/baby-trick/)
 * [Hello HitCon 2016 CTF](https://ctfs.ghost.io/hello-hitcon-2016-ctf/#babytrick)  
 
 
