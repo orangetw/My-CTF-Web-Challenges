@@ -396,6 +396,7 @@ Tag: **WhiteBox**, **PHP**, **UAF**, **PWN**
 * Bypass disable_functions  
 * PHP use-after-free exploit writing  
 * Bypass full protection (DEP / ASLR / PIE / FULL RELRO)  
+* [Yet Another Use After Free Vulnerability in unserialize() with SplDoublyLinkedList](https://github.com/80vul/phpcodz/blob/master/research/pch-034.md)  
 
 #### Source Code  
 
