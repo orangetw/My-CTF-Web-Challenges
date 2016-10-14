@@ -545,7 +545,7 @@ Tag: **GrayBox**, **PHP**, **JAVA**, **mod_jk**, **H2**, **SQL Injection**, **WA
 
 Solved: **0 / ??**  
 Difficulty: **★★★**  
-Tag: **WhiteBox**, **SQL Injection**, **LFI**, **Race Condition**  
+Tag: **WhiteBox**, **PHP**, **SQL Injection**, **LFI**, **Race Condition**  
 
 #### Idea  
 
