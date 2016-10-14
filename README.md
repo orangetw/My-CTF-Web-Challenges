@@ -550,7 +550,8 @@ Tag: **WhiteBox**, **SQL Injection**, **LFI**, **Race Condition**
 #### Idea  
 
 * One-byte off SQL Injection  
-* Race Condition
+* Race Condition  
+* Local file inclusion with PHP session  
 
 #### Source Code  
 
