@@ -74,8 +74,11 @@ $ curl -k  -H "host: very-secret-area-for-ctf.orange.tw" https://1.2.3.4/
 
 #### Write Ups
 
-* [HITCON 2016](https://dinhbaoluciusteam.wordpress.com/2016/10/10/hitcon-2016/)
-* [HITCON CTF 2016: %%% (Web) Write-up](http://icheernoom.blogspot.tw/2016/10/hitcon-ctf-2016-web-write-up.html)
+* [HITCON 2016](https://dinhbaoluciusteam.wordpress.com/2016/10/10/hitcon-2016/)  
+* [HITCON CTF 2016: %%% (Web) Write-up](http://icheernoom.blogspot.tw/2016/10/hitcon-ctf-2016-web-write-up.html)  
+* [\[HITCON 2016\] \[WEB 100 - %%%\] WRITE UP](https://0x90r00t.com/2016/10/10/hitcon-2016-web-100-write-up/)  
+* [hitcon2016 web writeup](http://lorexxar.cn/2016/10/10/hitcon2016/)  
+
 
 
 ## **Leaking**
@@ -104,6 +107,9 @@ $ while true; do curl 'http://1.2.3.4/?data=Buffer(1e4)' | grep -a hitcon; done;
 #### Write Ups
 
 * [Hello HitCon 2016 CTF](https://ctfs.ghost.io/hello-hitcon-2016-ctf/#leaking)  
+* [HITCON 2016 web 总结](http://0x48.pw/2016/10/14/0x24/)  
+* [hitcon2016 web writeup](http://lorexxar.cn/2016/10/10/hitcon2016/)
+
 
 
 ## **BabyTrick**
@@ -138,6 +144,9 @@ curl http://1.2.3.4/
 
 * [Hitcon 2016 – Baby Trick](http://0xecute.com/index.php/2016/10/10/baby-trick/)
 * [Hello HitCon 2016 CTF](https://ctfs.ghost.io/hello-hitcon-2016-ctf/#babytrick)  
+* [hitcon2016 web writeup](http://lorexxar.cn/2016/10/10/hitcon2016/)
+
+
 
 
 ## **Angry Boy**
