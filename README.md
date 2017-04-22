@@ -195,7 +195,9 @@ Tag: **GrayBox**, **Java**, **Seam Framework**, **CSS RPO**, **EL Injection**, *
 #### Solution
 
 <br>
+
 **P.s.** I made this challenge because once when I try to review the code of Seam Framework, I found some 0-days and I think it must have more. So I throw out the brick to attract a jade. And the result is more than I expected :P  
+
 <br>
 
 **Intended solution**  
