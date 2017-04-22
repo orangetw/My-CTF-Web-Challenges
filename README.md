@@ -265,7 +265,7 @@ Tag: **WhiteBox**, **PHP**, **Command Injection**
 
 * [here](hitcon-ctf-2015/babyfirst)  
 
-   ```php
+```php
 <?php
     highlight_file(__FILE__);
 
@@ -282,7 +282,7 @@ Tag: **WhiteBox**, **PHP**, **Command Injection**
 
     exec("/bin/orange " . implode(" ", $args));
 ?>
-   ```
+```
 
 
 #### Solution
