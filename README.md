@@ -31,7 +31,7 @@ Hope you like it :)
     * [BabyFirst Revenge v2](#babyfirst-revenge-v2)
     * [SSRFme?](#ssrfme)
     * [SQL so Hard](#sql-so-hard)
-    * [Baby^H Master PHP 2017](#baby^h-master-php-2017)  
+    * [Baby^H Master PHP 2017](#babyh-master-php-2017)  
 
 * [HITCON 2016 Quals](#papapa)
     * [%%%](#papapa)
