@@ -63,7 +63,7 @@ Hope you like it :)
 ## **BabyFirst Revenge**
   
 Difficulty: **★☆**  
-Sovled: **71 / 1024**  
+Sovled: **95 / 1541**  
 Tag:  **WhiteBox**, **PHP**, **Command Injection**  
 
 #### Idea
@@ -116,7 +116,7 @@ You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for
 ## **BabyFirst Revenge v2**
   
 Difficulty: **★★★★**  
-Sovled: **71 / 1024**  
+Sovled: **8 / 1541**  
 Tag:  **WhiteBox**, **PHP**, **Command Injection**  
 
 #### Idea
@@ -147,7 +147,7 @@ You can check [exploit.py](hitcon-ctf-2017/babyfirst-revenge-v2/exploit.py) for 
 ## **SSRFme?**
   
 Difficulty: **★★☆**  
-Sovled: **71 / 1024**  
+Sovled: **20 / 1541**  
 Tag:  **WhiteBox**, **Perl**, **PATH Pollution**  
 
 #### Idea
@@ -183,7 +183,7 @@ $ curl http://host/?filename=xxx&url=orange://orange.tw
 ## **SQL so Hard**
   
 Difficulty: **★★★**  
-Sovled: **71 / 1024**  
+Sovled: **10 / 1541**  
 Tag:  **WhiteBox**, **MySQL**, **PostgreSQL**, **SQL Injection**, **Code Injection**  
 
 #### Idea
@@ -208,7 +208,7 @@ Tag:  **WhiteBox**, **MySQL**, **PostgreSQL**, **SQL Injection**, **Code Injecti
 ## **Baby^H Master PHP 2017**
   
 Difficulty: **★★★★☆**  
-Sovled: **0 / 1024**  
+Sovled: **0 / 1541**  
 Tag:  **WhiteBox**, **PHP**, **Serialization**, **Apache Prefock**  
 
 #### Idea
