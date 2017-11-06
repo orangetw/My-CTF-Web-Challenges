@@ -109,7 +109,8 @@ You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for
 
 #### Write Ups
 
-* [HITCON CTF 2017-BabyFirst Revenge-writeup](https://chybeta.github.io/2017/11/04/HITCON-CTF-2017-BabyFirst-Revenge-writeup/)  
+* [HITCON CTF 2017-BabyFirst Revenge-writeup](https://chybeta.github.io/2017/11/04/HITCON-CTF-2017-BabyFirst-Revenge-writeup/)  
+* [HITCON CTF 2017-BabyFirst Revenge-writeup Via curl](http://www.jianshu.com/p/82788b6949c7)
 
 
 
