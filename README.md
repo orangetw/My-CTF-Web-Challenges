@@ -109,7 +109,7 @@ You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for
 
 #### Write Ups
 
-  TBD
+    TBD
 
 
 
@@ -176,7 +176,7 @@ $ curl http://host/?filename=xxx&url=orange://orange.tw
 
 #### Write Ups
 
-  TBD
+    TBD
 
 
 
@@ -202,7 +202,7 @@ Tag:  **WhiteBox**, **MySQL**, **PostgreSQL**, **SQL Injection**, **Code Injecti
 
 #### Write Ups
 
-  TBD
+    TBD
 
 
 ## **Baby^H Master PHP 2017**
@@ -242,7 +242,7 @@ $ curl -b cookie "http://host/?m=upload&url=phar:///var/www/data/$MD5_IP/&lucky=
 
 #### Write Ups
 
-  No one solve it :(
+    No one solve it :(
 
 
 
