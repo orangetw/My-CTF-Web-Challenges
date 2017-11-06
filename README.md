@@ -244,7 +244,7 @@ $ curl -b cookie "http://host/?m=upload&url=phar:///var/www/data/$MD5_IP/&lucky=
 
 #### Write Ups
 
-    No one solve it :(
+* [По умолчанию Чтение файлов => unserialize !](https://rdot.org/forum/showthread.php?t=4379)  
 
 
 
