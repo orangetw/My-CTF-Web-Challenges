@@ -140,7 +140,7 @@ You can check [exploit.py](hitcon-ctf-2017/babyfirst-revenge-v2/exploit.py) for 
 
 #### Write Ups
 
-  [script.py](https://gist.github.com/bennofs/63ce0503c5fba9277f01d13adbe95bf6) from @bennofs  
+* [script.py](https://gist.github.com/bennofs/63ce0503c5fba9277f01d13adbe95bf6) from @bennofs  
 
 
 
