@@ -181,6 +181,7 @@ $ curl http://host/?filename=xxx&url=orange://orange.tw
 #### Write Ups
 
 * [Another Solution by @Paul_Axe](https://twitter.com/Paul_Axe/status/927669724439293953)  
+* [HITCON 2017 SSRFme](https://ricterz.me/posts/HITCON%202017%20SSRFme)  
 
 
 
