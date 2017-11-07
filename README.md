@@ -113,7 +113,8 @@ You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for
 * [HITCON CTF 2017-BabyFirst Revenge-writeup Via curl](http://www.jianshu.com/p/82788b6949c7)  
 * [HITCON 2017 CTF BabyFirst Revenge](https://infosec.rm-it.de/2017/11/06/hitcon-2017-ctf-babyfirst-revenge/)  
 * [HITCON CTF 2017 - BabyFirst Revenge (172 pts.)](https://kimtruth.github.io/2017/11/06/HITCON-CTF-2017-BabyFirst-Revenge-172-pts/)  
-* [Hitcon CTF 2017 - Baby Revenge](https://theromanxpl0it.github.io/ctf_hitcon2017/babyrevenge/)  
+* [Hitcon CTF 2017 - Baby Revenge](https://theromanxpl0it.github.io/ctf_hitcon2017/babyrevenge/)  
+* [Hitcon CTF 2017 Quals: Baby First Revenge (web 172) (solved by using xxd)](https://losfuzzys.github.io/writeup/2017/11/06/hitconctf-babyfirstrevenge/)  
 
 
 
