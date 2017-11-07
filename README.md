@@ -180,7 +180,7 @@ $ curl http://host/?filename=xxx&url=orange://orange.tw
 
 #### Write Ups
 
-    TBD
+* [Another Solution by @Paul_Axe](https://twitter.com/Paul_Axe/status/927669724439293953)  
 
 
 
