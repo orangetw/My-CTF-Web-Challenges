@@ -147,6 +147,7 @@ You can check [exploit.py](hitcon-ctf-2017/babyfirst-revenge-v2/exploit.py) for 
 
 * [Baby First Revenge v2 (Via vim) by @bennofs](https://github.com/bennofs/docs/blob/master/hitcon-2017/baby-first-revenge2.md)  
 * [\[python\] baby-exp.py](https://codegists.com/snippet/python/baby-exppy_beched_python)  
+* [How to solve a CTF challenge for $20 - HITCON 2017 BabyFirst Revenge v2](https://www.eugenekolo.com/blog/hitcon-babyfirst-revenge-v2/)  
 
 
 
