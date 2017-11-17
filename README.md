@@ -115,6 +115,7 @@ You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for
 * [HITCON CTF 2017 - BabyFirst Revenge (172 pts.)](https://kimtruth.github.io/2017/11/06/HITCON-CTF-2017-BabyFirst-Revenge-172-pts/)  
 * [Hitcon CTF 2017 - Baby Revenge](https://theromanxpl0it.github.io/ctf_hitcon2017/babyrevenge/)  
 * [Hitcon CTF 2017 Quals: Baby First Revenge (web 172) (Via xxd)](https://losfuzzys.github.io/writeup/2017/11/06/hitconctf-babyfirstrevenge/)  
+* [HITCON CTF 2017 BabyFirst Revenge & v2 writeup](https://findneo.github.io/2017/11/HITCON-CTF-2017-Babyfirst-Revenge-series-writeup/)  
 
 
 
@@ -148,6 +149,7 @@ You can check [exploit.py](hitcon-ctf-2017/babyfirst-revenge-v2/exploit.py) for 
 * [Baby First Revenge v2 (Via vim) by @bennofs](https://github.com/bennofs/docs/blob/master/hitcon-2017/baby-first-revenge2.md)  
 * [\[python\] baby-exp.py](https://codegists.com/snippet/python/baby-exppy_beched_python)  
 * [How to solve a CTF challenge for $20 - HITCON 2017 BabyFirst Revenge v2](https://www.eugenekolo.com/blog/hitcon-babyfirst-revenge-v2/)  
+* [HITCON CTF 2017 BabyFirst Revenge & v2 writeup](https://findneo.github.io/2017/11/HITCON-CTF-2017-Babyfirst-Revenge-series-writeup/)  
 
 
 
