@@ -116,6 +116,7 @@ You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for
 * [Hitcon CTF 2017 - Baby Revenge](https://theromanxpl0it.github.io/ctf_hitcon2017/babyrevenge/)  
 * [Hitcon CTF 2017 Quals: Baby First Revenge (web 172) (Via xxd)](https://losfuzzys.github.io/writeup/2017/11/06/hitconctf-babyfirstrevenge/)  
 * [HITCON CTF 2017 BabyFirst Revenge & v2 writeup](https://findneo.github.io/2017/11/HITCON-CTF-2017-Babyfirst-Revenge-series-writeup/)  
+* [BabyFirst-Revenge-HITCOIN-2017-QUALS by @n4p5ter](https://github.com/n4p5ter/BabyFirst-Revenge-HITCOIN-2017-QUALS)  
 
 
 
