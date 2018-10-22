@@ -67,7 +67,7 @@ You can contact me via:
 ## **One Line PHP Challenge**
   
 Difficulty: **★★★★☆**  
-Solved: **2 / 1541**  
+Solved: **3 / 1816**  
 Tag:   **PHP**
 
 #### Source Code
@@ -92,7 +92,7 @@ P.S. This is a default installation PHP7.2 + Apache on Ubuntu 18.04
 ## **Baby Cake**
   
 Difficulty: **★★★**  
-Solved: **2 / 1541**  
+Solved: **4 / 1816**  
 Tag:   **Code Review**, **PHP**, **De-serialization**
 
 #### Source Code
@@ -123,8 +123,8 @@ http://13.230.134.135/
 
 ## **Oh My Raddit**
   
-Difficulty: **★★**  
-Solved: **2 / 1541**  
+Difficulty: **★7★**  
+Solved: **2 / 1816**  
 Tag:   **Observation**, **DES checksum**, **Crypto**, **Web**
 
 #### Source Code
@@ -148,7 +148,7 @@ Tag:   **Observation**, **DES checksum**, **Crypto**, **Web**
 ## **Oh My Raddit v2**
   
 Difficulty: **★★**  
-Solved: **2 / 1541**  
+Solved: **10 / 1816**  
 Tag:   **Web.py**,  **SQL Injection to RCE**
 
 #### Source Code
@@ -169,7 +169,7 @@ Tag:   **Web.py**,  **SQL Injection to RCE**
 ## **Why so Serials?**
   
 Difficulty: **★★★★**  
-Solved: **0 / 1541**  
+Solved: **1 / 1816**  
 Tag:   **De-serialization**, **RCE**, **ASP.NET**, **View State**
 
 #### Source Code
