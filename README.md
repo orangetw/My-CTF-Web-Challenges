@@ -138,7 +138,7 @@ Tag:   **Observation**, **DES checksum**, **Crypto**, **Web**
 2. Know `block size = 8` from cipher length
 3. From the information above, it's reasonable to use `DES` in real world
 4. The most common block is `3ca92540eb2d0a42`(always in the cipher end). We can guess it's the padding `\x08\x08\x08\x08\x08\x08\x08\x08`
-5. Due to the checking parity in [DES](https://en.wikipedia.org/wiki/Data_Encryption_Standard), we can reduce the keyspace from 26(`abcdefghijklmnopqrstuvwxyz`) to 14(`acegikmoqsuwyz`)
+5. Due to the checking parity in [DES](https://en.wikipedia.org/wiki/Data_Encryption_Standard), we can reduce the keyspace from 26(`abcdefghijklmnopqrstuvwxyz`) to 13(`acegikmoqsuwy`)
     * Break in 1 second with `HashCat`
     * Break in 10 minutes with single thread Python
 
