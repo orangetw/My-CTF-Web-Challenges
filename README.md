@@ -66,7 +66,7 @@ You can contact me via:
 
 ## **One Line PHP Challenge**
   
-Difficulty: **★★★★☆**  
+Difficulty: **★★★★**  
 Solved: **3 / 1816**  
 Tag:   **PHP**
 
