@@ -124,8 +124,8 @@ http://13.230.134.135/
 
 ## **Oh My Raddit**
   
-Difficulty: **★7★**  
-Solved: **2 / 1816**  
+Difficulty: **★★☆**  
+Solved: **27 / 1816**  
 Tag:   **Observation**, **DES checksum**, **Crypto**, **Web**
 
 #### Source Code
