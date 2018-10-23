@@ -1,0 +1,69 @@
+$def with (records, urls)
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        On my Raddit
+    </title>
+
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Josefin Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+    </style>
+    <script type="text/javascript">
+        function change(t){
+            var limit = t.value
+            if (limit == 10) {
+                location.href = '?s=$urls[0]';
+            } else if (limit == 100) {
+                location.href = '?s=$urls[1]';
+            } else {
+                location.href = '/';
+            }
+        }
+
+    </script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron" style='background: #f7f7f7'>
+        <h1>On my Raddit</h1>
+        <p>Flag is <b>hitcon{ENCRYPTION_KEY}</b>, and here is a <b><a href='static/hint.py'>hint</a></b> for you :P</p>
+        <p><i>P.S. If you fail in submitting the flag and want to argue with author, read the source first!</i></p>
+        <br />
+        <p>
+            Totoal: ${len(records)} &nbsp;
+            <select onchange='change(this)'>
+              <option value="10">10</option>
+              <option value="100">100</option>
+              <option value="All" selected>All</option>
+            </select>
+        </p> 
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Ups</th>
+              <th scope="col">Title</th>
+              <th scope="col">File</th>
+            </tr>
+          </thead>
+          <tbody>
+            $for r in records:
+                <tr>
+                  <td>$r['ups']</td>
+                  <td><a href="?s=$r['param']">$r['t']</a></td>
+                  $if r['file'] :
+                    <td><a href="?s=$r['file']">down</a></td>
+                  $else:
+                    <td></td>
+                </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</body>
+</html>

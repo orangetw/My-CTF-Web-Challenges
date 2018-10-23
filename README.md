@@ -86,7 +86,8 @@ P.S. This is a default installation PHP7.2 + Apache on Ubuntu 18.04
 
 #### Write Ups
 
-* TBD
+* [(English)One Line PHP Challenge](https://hackmd.io/s/B1A2JIjjm)  
+* [(中文)One Line PHP Challenge](https://hackmd.io/s/SkxOwAqiQ)  
 
 
 ## **Baby Cake**
@@ -119,7 +120,7 @@ http://13.230.134.135/
 
 #### Write Ups
 
-* TBD
+* [Baby Cake](https://github.com/PDKT-Team/ctf/tree/master/hitcon2018/baby-cake)  
 
 ## **Oh My Raddit**
   
