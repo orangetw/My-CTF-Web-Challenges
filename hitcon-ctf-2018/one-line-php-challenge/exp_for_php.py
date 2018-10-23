@@ -24,6 +24,7 @@ while 1:
     xx = b64encode(b64encode(payload + junk))
     xxx = b64encode(b64encode(b64encode(payload + junk)))
     if '=' not in x and '=' not in xx and '=' not in xxx:
+        payload = xxx
         print payload
         break
 
