@@ -116,7 +116,7 @@ http://13.230.134.135/
 &data[x]=@phar://../tmp/cache/mycache/[you_ip]/[md5_of_url]/body.cache
 ```
 
-* [exploit.phar](hitcon-ctf-2018/one-line-php-challenge/exploit.phar)
+* [exploit.phar](hitcon-ctf-2018/baby-cake/exploit.phar)
 
 #### Write Ups
 
