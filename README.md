@@ -149,6 +149,7 @@ Tag:   **Observation**, **DES checksum**, **Crypto**, **Web**
 #### Write Ups
 
 * [Oh My Raddit](https://github.com/pwning/public-writeup/blob/e818115a2c3a5d18e8191d37b5c3151823d43126/hitcon2018/oh-my-raddit/README.md)  
+* [Oh my raddit](https://github.com/mdsnins/ctf-writeups/blob/b292621463b156d864bd2db062f31afe9aacb8d6/HITCON%202018/Oh%20my%20raddit.md)
 * [2018HITCON-Oh My Raddit&v2题解](https://mochazz.github.io/2018/10/25/2018HITCON-Oh%20My%20Raddit&v2%E9%A2%98%E8%A7%A3/)  
 
 ## **Oh My Raddit v2**
