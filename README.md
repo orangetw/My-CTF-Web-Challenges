@@ -83,12 +83,14 @@ P.S. This is a default installation PHP7.2 + Apache on Ubuntu 18.04
 3. Control the prefix to `@<?php` by chaining PHP wrappers
 
 * [exp_for_php.py](hitcon-ctf-2018/one-line-php-challenge/exp_for_php.py)
+* [Offical writeup for One Line PHP Challenge](http://blog.orange.tw/2018/10/hitcon-ctf-2018-one-line-php-challenge.html)  
 
 #### Write Ups
 
 * [(English)One Line PHP Challenge](https://hackmd.io/s/B1A2JIjjm)  
 * [(中文)One Line PHP Challenge](https://hackmd.io/s/SkxOwAqiQ)  
-
+* [hitcon2018 One Line PHP Challenge](https://www.kingkk.com/2018/10/hitcon2018-One-Line-PHP-Challenge/)  
+* [hitcon 2018受虐笔记一:one-line-php-challenge 学习](http://wonderkun.cc/index.html/?p=718)  
 
 ## **Baby Cake**
   
@@ -121,6 +123,8 @@ http://13.230.134.135/
 #### Write Ups
 
 * [Baby Cake](https://github.com/PDKT-Team/ctf/tree/master/hitcon2018/baby-cake)  
+* [Hitcon 2018 Web - Oh My Raddit / Baby Cake 题解](https://xz.aliyun.com/t/2961)  
+* [HITCON CTF 2018 Web WP 之 Baby Cake](https://xz.aliyun.com/t/3035)  
 
 ## **Oh My Raddit**
   
@@ -144,7 +148,8 @@ Tag:   **Observation**, **DES checksum**, **Crypto**, **Web**
 
 #### Write Ups
 
-* TBD
+* [Oh My Raddit](https://github.com/pwning/public-writeup/blob/e818115a2c3a5d18e8191d37b5c3151823d43126/hitcon2018/oh-my-raddit/README.md)  
+* [2018HITCON-Oh My Raddit&v2题解](https://mochazz.github.io/2018/10/25/2018HITCON-Oh%20My%20Raddit&v2%E9%A2%98%E8%A7%A3/)  
 
 ## **Oh My Raddit v2**
   
@@ -165,7 +170,9 @@ Tag:   **Web.py**,  **SQL Injection to RCE**
 
 #### Write Ups
 
-* TBD
+* [Oh My Raddit V2](https://github.com/pwning/public-writeup/blob/c7273a8bd01710da0f2d9d9a3c8abe473b76bfde/hitcon2018/ohmyradditv2/README.md)
+* [Oh My Raddit v2](https://ctftime.org/writeup/11931)  
+* [2018HITCON-Oh My Raddit&v2题解](https://mochazz.github.io/2018/10/25/2018HITCON-Oh%20My%20Raddit&v2%E9%A2%98%E8%A7%A3/)  
 
 ## **Why so Serials?**
   
@@ -184,7 +191,8 @@ Tag:   **De-serialization**, **RCE**, **ASP.NET**, **View State**
 
 #### Write Ups
 
-* TBD
+* [HITCON 2018: Why so Serials? Write-up](https://cyku.tw/ctf-hitcon-2018-why-so-serials/)  
+* [HITCON CTF 2018 - Why so Serials? Writeup](https://xz.aliyun.com/t/3019)  
 
 
 ## **BabyFirst Revenge**
