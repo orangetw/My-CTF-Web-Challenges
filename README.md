@@ -100,7 +100,7 @@ Tag:   **Code Review**, **PHP**, **De-serialization**
 
 #### Source Code
 
-* [index.php](hitcon-ctf-2018/baby-cake-src/baby_cake.tgz)  
+* [index.php](hitcon-ctf-2018/baby-cake/baby_cake.tgz)  
 
 #### Solution
 
