@@ -245,7 +245,7 @@ Content-Length: 61
 from urllib import quote
 
 s = lambda x: quote(x.encode('ibm500'))
-print '%s=%s&x=%s' % (s('filename'), s('../../FLAG.txt', s('<x>')))
+print '%s=%s&x=%s' % (s('filename'), s('../../FLAG.txt', s('<x>'))
 ```
 
 #### Write Ups
