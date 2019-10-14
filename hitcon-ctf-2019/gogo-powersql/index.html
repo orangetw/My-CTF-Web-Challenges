@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+    <style type="text/css">
+        .form-control-borderless {
+            border: none;
+        }
+
+        .form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function query(event) {
+            event.preventDefault();
+            var name = event.target.form.name.value;
+            var out = document.getElementById('msg');
+            out.innerText = '';
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'cgi-bin/query?name=' + name);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    if (Array.isArray(response))
+                        if (response.length == 0)
+                            out.innerText = 'Nothing found :(';
+                        else
+                            out.innerText = response.join('\n');
+                    else
+                        out.innerText = 'Error: ' + response.error;
+                } else {
+                    out.innerText = 'Something Error :(';
+                }
+            };
+            xhr.send();
+        }
+
+    </script>
+</head>
+<body>
+    <div class='container'>
+        <br>
+        <br>
+        <div class='row justify-content-center'>
+            <h1><font style="font-size: 200%"> Query Names...</font></h1>
+        </div>
+
+        <br>
+        <br>
+        <div class='row justify-content-center'>
+            <div class="col-12 col-md-10 col-lg-12">
+                <form class="card card-sm" method="GET" action="">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col">
+                            <input class="form-control form-control-lg form-control-borderless" type="text" name="name" placeholder="Name here">
+                        </div>
+
+                        <div class="col-auto">
+                            <button class="btn btn-lg btn-success" onclick="query(event)">Query</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div class='row justify-content-center'>
+            <h3><font color='red' id='msg'></font></h3>
+        </div>
+    </div>
+</body>
+</html>

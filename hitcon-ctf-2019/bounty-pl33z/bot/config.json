@@ -1,0 +1,7 @@
+{
+    "password": "orangenogg", 
+    "server_ip": "3.114.5.202", 
+    "base": "http://3.114.5.202/", 
+    "admin_url": "http://3.114.5.202/.admin.php", 
+    "flag": "hitcon{/FD 1s 0ur g0d <(_ _)>}"
+}

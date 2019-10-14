@@ -1,0 +1,46 @@
+#
+#   route.txt - Route and authorization configuration
+#
+#   Schema
+#       route uri=URI protocol=PROTOCOL methods=METHODS handler=HANDLER redirect=STATUS@URI \
+#           extensions=EXTENSIONS abilities=ABILITIES 
+#
+#   Routes may require authentication and that users possess certain abilities.
+#   The abilities, extensions, methods and redirect keywords use comma separated tokens to express a set of 
+#       required options, or use "|" separated tokens for a set of alternative options. This implements AND/OR.
+#   The protocol keyword may be set to http or https. The redirect status may be "*" to match all HTTP status codes.
+#   Multiple redirect fields are permissible.
+#
+#   Examples:
+#
+#   Universally redirect http to https for secure communications
+#       route uri=/ protocol=http redirect=*@https handler=redirect
+#
+#   Form based login pattern. 
+#       route uri=/pub/
+#       route uri=/action/login methods=POST handler=action redirect=200@/ redirect=401@/pub/login.html
+#       route uri=/action/logout methods=POST handler=action redirect=200@/pub/login.html
+#       route uri=/ auth=form handler=continue redirect=401@/pub/login.html
+#
+#   Sample basic or digest authentication for user "joshua" 
+#       route uri=/auth/basic/ auth=basic abilities=manage
+#       route uri=/auth/digest/ auth=digest abilities=manage
+#
+#   Eanable the PUT or DELETE methods (only) for the BIT_GOAHEAD_PUT_DIR directory
+#       route uri=/put/ methods=PUT|DELETE
+#
+#   Standard routes
+#
+route uri=/cgi-bin  handler=cgi
+# route uri=/action handler=action
+# route uri=/ extensions=jst handler=jst
+# route uri=/ methods=OPTIONS|TRACE handler=options
+
+#   For legacy GoAhead applications using /goform
+# route uri=/goform handler=action
+
+#
+#   Catch-all route without authentication for all other URIs
+#
+route uri=/
+
