@@ -108,7 +108,7 @@ Tag:   **XSS**
 
 #### Source Code
 
-* [Website](hitcon-ctf-2019/bounty-pl33z/web/)  
+* [Website](hitcon-ctf-2019/bounty-pl33z/www/)  
 * [XSS bot](hitcon-ctf-2019/bounty-pl33z/bot/)  
 
 #### Solution
