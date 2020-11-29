@@ -1,0 +1,6 @@
+# CentOS 5.7
+# Apache 2.2.22
+./configure --prefix=/usr/local/apache2 --sysconfdir=/etc/httpd --enable-rewrite=static --with-mpm=worker --enable-so --enable-proxy --enable-proxy-http --enable-deflate --enable-headers --enable-expires --with-included-apr
+
+# PHP 5.3.27
+./configure --prefix=/usr/local/apache2/php  --with-apxs2=/usr/local/apache2/bin/apxs --with-config-file-path=/usr/local/apache2/php --enable-mysqlnd

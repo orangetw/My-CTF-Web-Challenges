@@ -1,0 +1,5 @@
+{
+    "REDIS_HOST": "172.17.0.1", 
+    "REDIS_PASS": "fake-redis-pass", 
+    "URL_BASE": "http://52.68.87.21/"
+}
