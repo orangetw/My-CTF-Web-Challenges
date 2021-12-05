@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName CTF
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user

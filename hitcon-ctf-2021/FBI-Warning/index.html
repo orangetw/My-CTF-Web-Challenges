@@ -1,0 +1,59 @@
+
+<html><head>
+<meta charset="UTF-8"/>
+<!-- meta HTTP-EQUIV="pragma" CONTENT="no-cache" -->
+<STYLE TYPE="text/css">
+<!--
+body,tr,td,th { font-size:12pt }
+a:hover { color:#DD0000; }
+span { font-size:20pt }
+small { font-size:10pt }
+-->
+</STYLE>
+<title>画像掲示板</title>
+<script language="JavaScript"><!--
+function l(e){var P=getCookie("pwdc"),N=getCookie("namec"),i;with(document){for(i=0;i<forms.length;i++){if(forms[i].pwd)with(forms[i]){pwd.value=P;}if(forms[i].name)with(forms[i]){name.value=N;}}}};onload=l;function getCookie(key, tmp1, tmp2, xx1, xx2, xx3) {tmp1 = " " + document.cookie + ";";xx1 = xx2 = 0;len = tmp1.length;	while (xx1 < len) {xx2 = tmp1.indexOf(";", xx1);tmp2 = tmp1.substring(xx1 + 1, xx2);xx3 = tmp2.indexOf("=");if (tmp2.substring(0, xx3) == key) {return(unescape(tmp2.substring(xx3 + 1, xx2 - xx1 - 1)));}xx1 = xx2 + 1;}return("");}
+//--></script>
+</head>
+<body bgcolor="#FFFFEE" text="#800000" link="#0000EE" vlink="#0000EE">
+<p align=right>
+[<a href="./" target="_top">ホーム</a>]
+[<a href="index.php?mode=admin">管理用</a>]
+<p align=center>
+<font color="#800000" size=5>
+<b><SPAN>画像掲示板</SPAN></b></font>
+<hr width="90%" size=1>
+<center>
+<form action="index.php" method="POST" enctype="multipart/form-data">
+<input type=hidden name=mode value="regist">
+
+<input type=hidden name="MAX_FILE_SIZE" value="512000">
+<table cellpadding=1 cellspacing=1>
+  <tr><td bgcolor=#eeaa88><b>おなまえ</b></td><td><input type=text name=name size="28"></td></tr>
+  <tr><td bgcolor=#eeaa88><b>E-mail</b></td><td><input type=text name=email size="28"></td></tr>
+  <tr><td bgcolor=#eeaa88><b>題　　名</b></td><td><input type=text name=sub size="35">
+  <input type=submit value="送信する"></td></tr>
+  <tr><td bgcolor=#eeaa88><b>コメント</b></td><td><textarea name=com cols="48" rows="4" wrap=soft></textarea></td></tr>
+  <tr><td bgcolor=#eeaa88><b>添付File</b></td>
+    <td><input type=file name=upfile size="35">
+    [<label><input type=checkbox name=textonly value=on>画像なし</label>]</td></tr><tr><td bgcolor=#eeaa88><b>削除キー</b></td><td><input type=password name=pwd size=8 maxlength=8 value=""><small>(記事の削除用。英数字で8文字以内)</small></td></tr>
+  <tr><td colspan=2>
+  <small>
+  <LI>添付可能ファイル：GIF, JPG, PNG ブラウザによっては正常に添付できないことがあります。
+  <LI>最大投稿データ量は 500 KB までです。sage機能付き。
+  <LI>画像は横 250ピクセル、縦 250ピクセルを超えると縮小表示されます。
+  </small></td></tr></table></form></center><hr><form action="index.php" method=POST>画像タイトル：<a href="src/1638537259302.jpg" target=_blank>1638537259302.jpg</a>-(71258 B)<br><a href="src/1638537259302.jpg" target=_blank><img src=src/1638537259302.jpg border=0 align=left width=250 height=141 hspace=20 alt="71258 B"></a><input type=checkbox name="2" value=delete><font color=#cc1105 size=+1><b>FBI was hacked</b></font> 
+Name <font color=#117743><b>Ωrange</b></font> 21/12/03(金)22:14 ID:ueyUrcwA No.2 &nbsp; 
+[<a href=index.php?res=2>返信</a>]
+<blockquote>I have hacked FBI and  dump the DB here.<br /><a href="https://tinyurl.com/fbi-hack" target="_blank">https://tinyurl.com/fbi-hack</a></blockquote><br clear=left><hr>
+<table align=right><tr><td nowrap align=center>
+<input type=hidden name=mode value=usrdel>【記事削除】[<input type=checkbox name=onlyimgdel value=on>画像だけ消す]<br>
+削除キー<input type=password name=pwd size=8 maxlength=8 value="">
+<input type=submit value="削除"></form></td></tr></table><table align=left border=1><tr><td>最初のページ</td><td>[<b>0</b>] </td><td>最後のページ</td></tr></table><br clear=all>
+
+<center>
+<small><!-- GazouBBS v3.0 --><!-- ふたば改0.8 -->
+- <a href="http://php.s3.to" target=_top>GazouBBS</a> + <a href="http://www.2chan.net/" target=_top>futaba</a>-
+</small>
+</center>
+</body></html>

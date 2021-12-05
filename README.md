@@ -24,6 +24,13 @@ And you can find me via:
 
 ## **Table of Content**
 
+* [HITCON 2021](#W3rmup-PHP)
+    * [W3rmup PHP](#W3rmup-PHP)
+    * [One-Bit Man](#One-Bit-Man)
+    * [Metamon Verse](#Metamon-Verse)
+    * [FBI Warning](#FBI-Warning)
+    * [Vulpixelize](#Vulpixelize)
+
 * [HITCON 2020](#oShell)
     * [oShell](#oShell)
     * [oStyle](#oStyle)
@@ -76,6 +83,149 @@ And you can find me via:
     * [SQLPWN](#sqlpwn)
     
 <br>
+
+## **W3rmup PHP**
+  
+Difficulty: **★★**  
+Solved: **22 / 666**  
+Tag:   **PHP**, **Code Review**, **YAML** ,**Command Injection**  
+
+#### Source Code
+
+* [Source](hitcon-ctf-2021/W3rmup-PHP/)  
+
+#### Idea
+
+* [The Norway Problem](https://hitchdev.com/strictyaml/why/implicit-typing-removed/), the country code of Norway (NO) becomes `False` in YAML
+* Bypass the `escapeshellarg` by the logic problem of `count()` + `unset()`  
+
+#### Solution
+
+* TBD
+
+#### Write Ups
+
+* TBD
+
+
+## **One-Bit Man**
+  
+Difficulty: **★**  
+Solved: **49 / 666**  
+Tag:   **PHP**, **Code Review**
+
+#### Source Code
+
+* [Source](hitcon-ctf-2021/One-Bit-Man/)  
+
+#### Idea
+
+You can flip 1-bit on any file of the latest version of WordPress and you have to pwn the server.
+
+#### Solution
+
+Flip the position `5389` of the file `/var/www/html/wp-includes/user.php` to NOP the NOT (`!`) operation.
+
+```php
+    if ( ! wp_check_password( $password, $user->user_pass, $user->ID ) ) {
+            return new WP_Error(
+```
+
+#### Write Ups
+
+* TBD
+
+
+
+## **Metamon Verse**
+  
+Difficulty: **★★★☆**  
+Solved: **9 / 666**  
+Tag:   **NFS**, **SSRF** ,**RCE**  
+
+#### Source Code
+
+* [Source](hitcon-ctf-2021/oShell/)  
+
+#### Idea
+
+The idea is using the SSRF to communicate with the local NFS/RPC server to get the RCE. To complete the exploit, you have to:
+
+1. Construct the `RPC/PORTMAP_CALL` packet and send to `gopher://127.0.0.1:111/` to get the port of `mountd` service.
+2. Construct the `RPC/MNT_CALL` packet and send to `gopher://127.0.0.1:<mnt-port>/` to get the file-handler of `/data` volume (remember to specify `CURLOPT_LOCALPORT` to bypass the authentication)
+3. Construct the `RPC/NFS_CALL` packet and send to `gopher://127.0.0.1:2049/` to create a SYMLINK (remember to specify `CURLOPT_LOCALPORT` to bypass the authentication)
+4. Symlink the `/app/templates/index.html` to a controllable file to get a SSTI and get the RCE!
+
+#### Solution
+
+An dirty exploit code can be found [here](https://gist.github.com/orangetw/6d34ff98a6332bc0523b35ea952a790d)
+
+#### Write Ups
+
+* TBD
+
+
+## **FBI Warning**
+  
+Difficulty: **☆**  
+Solved: **25 / 666**  
+Tag:   **MISC**, **OSINT** ,**PHP**, **Code Review**
+
+#### Source Code
+
+* [Source](hitcon-ctf-2021/FBI-Warning/)  
+
+#### Idea
+
+The website uses a famous Message Board project [futaba-ng](https://github.com/futoase/futaba-ng), and the ID generation is based on `REMOTE_ADDR`:
+
+```php
+define("IDSEED", 'idの種');       //idの種
+...
+$now.=" ID:".substr(crypt(md5($_SERVER["REMOTE_ADDR"].IDSEED.gmdate("Ymd", $time+9*60*60)),'id'),-8);
+```
+
+#### Solution
+
+Because of the known IP prefix, you can identify the IP address of Ωrange by brute-force easily.
+
+```php
+var_dump( substr(crypt(md5("219.91.64.47"."idの種"."20211203"),"id"),-8) == "ueyUrcwA" )
+// bool(true)
+```
+
+#### Write Ups
+
+* TBD
+
+
+
+## **Vulpixelize**
+  
+Difficulty: **★☆**  
+Solved: **41 / 666**  
+Tag:   **Browser**, **Feature**
+
+#### Source Code
+
+* [Source](hitcon-ctf-2021/Vulpixelize/)
+
+#### Idea
+
+Use the Chrome new feature [Text Fragments](https://wicg.github.io/scroll-to-text-fragment/) to extract the flag.
+
+
+#### Solution
+
+* TBD
+
+#### Write Ups
+
+* TBD
+
+
+
+
 
 ## **oShell**
   

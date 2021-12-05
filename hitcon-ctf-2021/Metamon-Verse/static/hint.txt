@@ -1,0 +1,10 @@
+As for the `nfs.server`, whatever NFS server is OK. Once your NFS server is up and the image-saving feature works fine on your local environmental, you have everything to solve the challenge!
+
+To be more clear, here is my NFS setup:
+
+$ apt install -y nfs-kernel-server nfs-common rpcbind
+$ cat /etc/export
+/data    172.16.0.0/12(rw,sync)
+$ mkdir /data
+$ chown nobody.nogroup /data
+$ service nfs-kernel-server start

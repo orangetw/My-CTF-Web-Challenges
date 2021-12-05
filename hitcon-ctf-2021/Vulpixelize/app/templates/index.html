@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vulpixelize</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/minty/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=block&family=Averia+Libre:ital,wght@1,300&family=Nunito+Sans:wght@700&display=swap&family=Nunito+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        .form-control-borderless {
+            border: none;
+        }
+
+        .form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .title {
+            font-family: 'Nothing You Could Do', sans-serif;
+            color: yellow;
+            font-weight: 1000;
+            font-size: 6rem;
+            letter-spacing: 8px;
+        }
+
+        #msg {
+            font-family: 'Nothing You Could Do', sans-serif;
+            color: orange;
+        }
+
+        body {
+            background-image: url('./static/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <br>
+        <br>
+        <div class='row text-center'>
+            <h1><font class="title">Vulpixelize</font></h1>
+        </div>
+
+        <br>
+        <div class='row justify-content-center'>
+            <div class="col-10 col-md-10 col-lg-10">
+                <form class="card card-sm" method="GET" action="/submit">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-11">
+                            <input class="form-control form-control form-control-borderless" type="text" name="url" placeholder="http://" autocomplete="off">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn btn-success" type="submit">Go</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div class='row text-center'>
+            <font size="6em" color='brown' id="msg">
+                {% if msg and msg.startswith('static') %}
+                    <a target="_blank" href="{{ msg }}">Your Vulpix</a>
+                {% else %}
+                    {{ msg }}
+                {% endif %}
+            </font>
+        </div>
+    </div>
+</body>
+</html>
